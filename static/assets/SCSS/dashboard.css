@@ -1,0 +1,299 @@
+.dashboard {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.title h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 80px;
+  font-weight: 500;
+  color: #a3bc3a;
+  text-transform: uppercase;
+}
+
+.title div {
+  width: 65%;
+  height: 7px;
+  background-color: #2858a1;
+  margin-left: -16em;
+}
+
+.gallery {
+  width: 1200px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile {
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #2858a134;
+  height: 580px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-list {
+  width: 75%;
+  margin: 10px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.315);
+  border-radius: 15px;
+}
+
+.profile-list img {
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #2858a1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container {
+  width: 60%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #2858a134;
+  height: 580px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container .video-list {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .video-list a {
+  padding: 15px 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 55px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.container .video-list a.active,
+.container .video-list a:hover {
+  background: #2858a1;
+  -webkit-box-shadow: 0 0 0 4px #a3bc3a inset;
+          box-shadow: 0 0 0 4px #a3bc3a inset;
+}
+
+.container .main-video {
+  width: 70%;
+  padding: 10px;
+}
+
+.container .main-video .service_button {
+  text-decoration: none;
+  color: #a3bc3a;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  background: #2858a1;
+  -webkit-box-shadow: 0 0 0 4px #a3bc3a inset;
+          box-shadow: 0 0 0 4px #a3bc3a inset;
+}
+
+/* TO DO TASK */
+.info_task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #b4c768;
+  border-radius: 10px;
+  background: white;
+}
+
+.info_task .info_line {
+  padding: 5px 0;
+}
+
+.info_task .info_title,
+.info_task .info_desc {
+  color: #2858a1;
+}
+
+.task_add {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.task_add button {
+  background: white;
+  color: #a3bc3a;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #a3bc3a;
+  border-radius: 50%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.task_form {
+  background: white;
+  padding: 30px;
+  border: 1px solid #a3bc3a;
+  border-radius: 10px;
+}
+
+.task_form form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.task_form form .close_popup {
+  position: absolute;
+  top: -25px;
+  right: -18px;
+  font-size: 20px;
+  color: #a3bc3a;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.task_form form input {
+  margin: 5px 0;
+  color: #2858a1;
+  border: 1px solid #2858a1;
+  border-radius: 5px;
+  -webkit-box-shadow: #2858a1 2px;
+          box-shadow: #2858a1 2px;
+  padding: 5px;
+}
+
+.task_form form input::-webkit-input-placeholder {
+  color: #2858a1;
+}
+
+.task_form form input:-ms-input-placeholder {
+  color: #2858a1;
+}
+
+.task_form form input::-ms-input-placeholder {
+  color: #2858a1;
+}
+
+.task_form form input::placeholder {
+  color: #2858a1;
+}
+
+.task_form form input:focus-visible {
+  border: 2px solid #a3bc3a;
+  outline: none;
+}
+
+/* END */
+/*# sourceMappingURL=dashboard.css.map */
