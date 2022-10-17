@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="../static/assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../static/assets/css/login.css">
+    <link
+      rel="stylesheet"
+      href="../static/assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../static/assets/css/login.css" />
     <script src="../static/assets/js/login.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="loginpage">
-        <div class="mbs">
+      <div class="mbs">
+        <img src="../static/assets/images/mbslogo.png" alt="MyBrokerSearch" />
+        <h1>crm system</h1>
+      </div>
 
-            <img src="../static/assets/images/mbslogo.png" alt="MyBrokerSearch">
-            <h1>crm system</h1>
-            <!-- <select name="BusinessType" id="btype">
-                <option value="none">Select Your Business Type</option>
-                <option value="realestate">Real Estate</option>
-                <option value="mortgage">Mortgage</option>
-                <option value="insurnace">Insurance</option>
-            </select> -->
-
+      <form class="logbox" actions="login.html" method="POST">
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter Username"
+          id="username"
+        />
+        <div id="hiddenpass">
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            id="password"
+          />
+          <i
+            class="fa fa-eye"
+            aria-hidden="true"
+            id="show-password"
+            onclick="changeIcon(this);"
+          ></i>
         </div>
-
-        <form class="logbox" actions="login.html" method="POST">
-
-            <input type="text" name="username" placeholder="Enter Username" id="username">
-            <div id="hiddenpass">
-                <input type="password" name="password" placeholder="Enter Password" id="password">
-                <i class="fa fa-eye" aria-hidden="true" id="show-password" onclick="changeIcon(this);"></i>
-            </div>
-            <!-- <div id="visiblepass">
+        <!-- <div id="visiblepass">
                 <input type="text" name="" placeholder="Enter Password" id="openpass">
                 <i class="fa fa-eye-slash" id="" aria-hidden="true"></i>
             </div> -->
-            
-            <input type="submit" name="submit" value="Login" onclick="validate()">
-            <span class="learnmore">Don't have My Broker Search yet? <a href="www.mybrokersearch.com">Learn More Today</a></span>
-        </form>
+
+        <input type="submit" name="submit" value="Login" onclick="validate()" />
+        <span class="learnmore"
+          >Don't have My Broker Search yet?
+          <a href="www.mybrokersearch.com">Learn More Today</a></span
+        >
+      </form>
     </div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </html>
