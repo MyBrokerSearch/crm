@@ -1,230 +1,150 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    background: url(../images/LOGIN\ back.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: fixed;
-    background-position: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background: url(../images/LOGIN\ back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .loginpage {
-    /* background-color: rgba(0, 0, 0, 0.644);
-    border-radius: 15px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-.mbs{
-    width:300px;
-    padding: 20px;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+.mbs {
+  width: 350px;
+  padding: 20px;
+  text-align: center;
 }
 
 .mbs img {
-    width: 150px;
-    height: 100px;
+  width: 150px;
+  height: 100px;
 }
 
 .mbs h1 {
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-color: #A3BC3A;
-    border-radius: 25px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #a3bc3a;
+  border-radius: 25px;
 }
 
-/* .mbs select {
-    border: 0;
-    background-color: #a2bc3a41;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #2858A1;
-    padding: 14px 10px;
-    width: 220px; 
-    outline: none;
-    color: black;
-    border-radius: 10px;
-    transition: 0.25px;
-} */
-
-.logbox{
-    width:300px;
-    padding: 30px;
-    position: absolute;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-
+.logbox {
+  width: 350px;
+  padding: 30px;
+  text-align: center;
 }
 
 .logbox input[id="username"] {
-
-    border: 0;
-    background-color: #a2bc3a41;
-    display: block;
-    margin: 20px auto;
-    text-align: left;
-    padding: 15px 10px;
-    width: 300px;
-    outline: none;
-    color: black;
-    border-radius: 10px;
-    transition: 0.25px;
-    
+  border: 0;
+  background-color: #a2bc3a41;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  padding: 15px 10px;
+  width: 300px;
+  outline: none;
+  color: black;
+  border-radius: 10px;
+  transition: 0.25px;
 }
 
-.logbox input[id="username"]:hover{
-
-    /* width: 310px; */
-    background-color: #a2bc3a7a;
-    border: 1px solid #A3BC3A;
-
+.logbox input[id="username"]:hover {
+  /* width: 310px; */
+  background-color: #a2bc3a7a;
+  border: 1px solid #a3bc3a;
 }
 
 #hiddenpass {
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border: 0;
-    background-color: #a2bc3a41;
-    margin: 20px auto;
-    text-align: center;
-    padding: 15px 10px;
-    border-radius: 10px;
-    transition: 0.25px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background-color: #a2bc3a41;
+  margin: 20px auto;
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 10px;
+  transition: 0.25px;
 }
 
-#hiddenpass:hover{
-    /* width: 310px; */
-    background-color: #a2bc3a7a;
-    border: 1px solid #A3BC3A;
+#hiddenpass:hover {
+  /* width: 310px; */
+  background-color: #a2bc3a7a;
+  border: 1px solid #a3bc3a;
 }
 
 #hiddenpass input[type="password"] {
-    width: 252px;
-    background: none;
-    border: 0;
-    display: block;
-    text-align: left;
-    outline: none;
-    color: black;
-    border-radius: 10px;
-    transition: 0.25px;;
+  width: 252px;
+  background: none;
+  border: 0;
+  display: block;
+  text-align: left;
+  outline: none;
+  color: black;
+  border-radius: 10px;
+  transition: 0.25px;
 }
 
-
 #hiddenpass input[type="text"] {
-    width: 252px;
-    background: none;
-    border: 0;
-    display: block;
-    text-align: left;
-    outline: none;
-    color: black;
-    border-radius: 10px;
-    transition: 0.25px;;
+  width: 252px;
+  background: none;
+  border: 0;
+  display: block;
+  text-align: left;
+  outline: none;
+  color: black;
+  border-radius: 10px;
+  transition: 0.25px;
 }
 
 #hiddenpass i {
-    color: rgb(136, 135, 135);
-    font-size: 20px;
+  color: rgb(136, 135, 135);
+  font-size: 20px;
 }
-
-/* #visiblepass {
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border: 0;
-    background-color: #a2bc3a41;
-    margin: 20px auto;
-    text-align: center;
-    padding: 15px 10px;
-    border-radius: 10px;
-    transition: 0.25px;
-}
-
-#visiblepass:hover{
-    width: 310px;
-    background-color: #a2bc3a7a;
-    border: 2px solid #A3BC3A;
-}
-
-#visiblepass input[id="openpass"] {
-    width: 252px;
-    background: none;
-    border: 0;
-    display: block;
-    text-align: left;
-    outline: none;
-    color: black;
-    border-radius: 10px;
-    transition: 0.25px;;
-}
-
-#visiblepass i {
-    color: #5c5c5c;
-    font-size: 20px;
-} */
-
-
-
 
 .logbox input[type="submit"] {
-
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #A3BC3A;
-    padding: 14px 35px;
-    outline: none;
-    color: #A3BC3A;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 10px;
-    transition: 0.25px;
-    cursor: pointer;
-
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid #a3bc3a;
+  padding: 14px 35px;
+  outline: none;
+  color: #a3bc3a;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: 0.25px;
+  cursor: pointer;
 }
 
 .logbox input[type="submit"]:hover {
-    background: #2858A1;
-    border: 3px solid #2858A1;
-    color: white;
+  background: #2858a1;
+  border: 3px solid #2858a1;
+  color: white;
 }
 
-.learnmore{
-    font-size: 12px;
+.learnmore {
+  font-size: 12px;
 }
 
-.learnmore a{
-    text-decoration: none;
-    color: #2858A1;
-}
-
-@media screen and (max-width: 950px) {
-    .logbox {
-        top: 57%;
-    }
-    #hiddenpass {
-        width: 350px;
-        padding: 20px 10px;
-    }
+.learnmore a {
+  text-decoration: none;
+  color: #2858a1;
 }
