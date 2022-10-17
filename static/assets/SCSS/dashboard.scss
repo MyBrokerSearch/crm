@@ -1,0 +1,204 @@
+.dashboard {
+    box-sizing: border-box;
+    padding: 20px 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    font-weight: 500;
+    color: #a3bc3a;
+    text-transform: uppercase;
+}
+
+.title div {
+    width: 65%;
+    height: 7px;
+    background-color: #2858a1;
+    margin-left: -16em;
+}
+
+.gallery {
+    width: 1200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #2858a134;
+    height: 580px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-list {
+    width: 75%;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.315);
+    border-radius: 15px;
+}
+
+.profile-list img {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #2858a1;
+    object-fit: cover;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #2858a134;
+    height: 580px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container .video-list {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .video-list a {
+    padding: 15px 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    height: 55px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container .video-list a.active,
+.container .video-list a:hover {
+    background: #2858a1;
+    box-shadow: 0 0 0 4px #a3bc3a inset;
+}
+
+.container .main-video {
+    width: 70%;
+    padding: 10px;
+}
+
+.container .main-video {
+    .service_button {
+        text-decoration: none;
+        color: #a3bc3a;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        outline: none;
+        padding: 10px;
+        background: #2858a1;
+        box-shadow: 0 0 0 4px #a3bc3a inset;
+    }
+}
+
+/* TO DO TASK */
+
+.info_task {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    border: 1px solid #b4c768;
+    border-radius: 10px;
+    background: white;
+    .info_line {
+        padding: 5px 0;
+    }
+    .info_title,
+    .info_desc {
+        color: #2858a1;
+    }
+}
+
+.task_add {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    button {
+        background: white;
+        color: #a3bc3a;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #a3bc3a;
+        border-radius: 50%;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+.task_form {
+    background: white;
+    padding: 30px;
+    border: 1px solid #a3bc3a;
+    border-radius: 10px;
+    form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .close_popup {
+            position: absolute;
+            top: -25px;
+            right: -18px;
+            font-size: 20px;
+            color: #a3bc3a;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        input {
+            margin: 5px 0;
+            color: #2858a1;
+            border: 1px solid #2858a1;
+            border-radius: 5px;
+            box-shadow: #2858a1 2px;
+            padding: 5px;
+            &::placeholder {
+                color: #2858a1;
+            }
+            &:focus-visible {
+                border: 2px solid #a3bc3a;
+                outline: none;
+            }
+        }
+    }
+}
+
+/* END */

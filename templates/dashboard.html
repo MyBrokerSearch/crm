@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../static/assets/scss/dashboard.css" />
     <link rel="stylesheet" href="../static/assets/css/header.css" />
     <link
       rel="stylesheet"
@@ -70,14 +70,14 @@
         </div>
         <div class="container">
           <div class="video-list">
-            <a class="idx" onclick="slider(this)">IDX Data</a>
+            <a class="idx service_button" onclick="slider(this)">IDX Data</a>
             <a class="liveTraffic" onclick="slider(this)">Live Traffic</a>
             <a class="weblead" onclick="slider(this)">Website Leads</a>
             <a class="fbLeads" onclick="slider(this)">FB Leads</a>
             <a class="request" onclick="slider(this)">Request</a>
             <a class="todo" onclick="slider(this)">To-Do Tasks</a>
           </div>
-          <div class="main-video" id="idx">
+          <div class="main-video" id="idx" style="display: none">
             <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Idx Data</a>
           </div>
 
@@ -100,29 +100,77 @@
           <div class="main-video" id="todo" style="display: none">
             <div class="info_task">
               <div class="info_line">
-                <span class="info_title">Full Name:</span
-                ><span class="info_desc">John Doe</span>
+                <span class="info_title">Full Name:</span>&nbsp<span
+                  class="info_desc"
+                  >John Doe</span
+                >
               </div>
               <div class="info_line">
-                <span class="info_title">Email:</span
-                ><span class="info_desc">johndoe@gmail.com</span>
+                <span class="info_title">Email:</span>&nbsp<span
+                  class="info_desc"
+                  >johndoe@gmail.com</span
+                >
               </div>
               <div class="info_line">
-                <span class="info_title">Phone:</span
-                ><span class="info_desc">+11234567890</span>
+                <span class="info_title">Phone:</span>&nbsp<span
+                  class="info_desc"
+                  >+11234567890</span
+                >
               </div>
               <div class="info_line">
-                <span class="info_title">Date:</span
-                ><span class="info_desc">17-10-22</span>
+                <span class="info_title">Date:</span>&nbsp<span
+                  class="info_desc"
+                  >17-10-22</span
+                >
               </div>
               <div class="info_line">
-                <span class="info_title">Time:</span
-                ><span class="info_desc">02:00 P.M.</span>
+                <span class="info_title">Time:</span>&nbsp<span
+                  class="info_desc"
+                  >02:00 P.M.</span
+                >
               </div>
               <div class="info_line">
-                <span class="info_title">Contact By:</span
-                ><span class="info_desc">Call</span>
+                <span class="info_title">Contact By:</span>
+                &nbsp<span class="info_desc">Call</span>
               </div>
+            </div>
+            <div class="task_add">
+              <button class="task_popup" onclick="popup(this)">+</button>
+            </div>
+            <div id="task_popup" class="task_form" style="display: none">
+              <form>
+                <a class="close_popup" onclick="popup(this)">x</a>
+                <input
+                  name="fullname"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  name="phone"
+                  type="tel"
+                  placeholder="123-45-678"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  required
+                />
+                <input name="email" type="email" placeholder="Email" required />
+                <input
+                  name="date"
+                  type="text"
+                  placeholder="MM/DD/YYYY"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                  required
+                />
+                <input
+                  name="time"
+                  type="text"
+                  placeholder="02:00 PM"
+                  onfocus="(this.type='time')"
+                  onblur="(this.type='text')"
+                  required
+                />
+              </form>
             </div>
           </div>
         </div>
@@ -141,23 +189,14 @@
         content.style.display = "block";
       }
 
-      // $(document).ready(function(){
-      //     $('.video-list a').click (function(){
-
-      //         $(this).addClass('active').siblings().removeClass('active');
-      //         let src = $(this).attr('href')
-      //         $('.main-video a').attr('src',src);
-      //     })
-      // })
-
-      // document.querySelectorAll('.video-list').forEach(links =>{
-      //     links.addEventListener('click',(e) =>{
-      //         e.preventDefadivt();
-      //         var src = links.getAttribute('href');
-      //         document.querySelector('.video').src =src;
-      //         document.querySelector('.video').play();
-      //     });
-      // });
+      function popup(element) {
+        let hidden1 = document.getElementById("task_popup");
+        if (hidden1.style.display === "block") {
+          hidden1.style.display = "none";
+        } else {
+          hidden1.style.display = "block";
+        }
+      }
     </script>
   </body>
 </html>
