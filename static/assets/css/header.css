@@ -88,7 +88,7 @@ header {
         margin-left: -240px;
     }
 
-}
+};
 
 @media screen and (max-width: 1715px){
     .navbar i {
@@ -98,7 +98,7 @@ header {
         margin-left: -200px;
     }
 
-}
+};
 
 @media screen and (max-width: 1615px){
     .navbar i {
@@ -108,7 +108,7 @@ header {
         margin-left: -130px;
     }
 
-}
+};
 
 @media screen and (max-width: 1495px){
     .navbar i {
@@ -118,7 +118,7 @@ header {
         margin-left: -70px;
     }
 
-}
+};
 
 @media screen and (max-width: 1385px){
     .navbar i {
@@ -128,7 +128,7 @@ header {
         margin-left: -20px;
     }
 
-}
+};
 
 @media screen and (max-width: 1300px){
     .navbar i {
@@ -137,7 +137,7 @@ header {
     .navbar button{
         margin-left: 0px;
     }
-}
+};
 
 @media screen and (max-width: 1300px){
     .navbar i {
@@ -147,7 +147,7 @@ header {
         margin-left: 40px;
         margin-right: -40px;
     }
-}
+};
 
 @media screen and (max-width: 1015px){
     .navbar i {
@@ -157,4 +157,4 @@ header {
         margin-left: 50px;
         margin-right: -50px;
     }
-}
+};

@@ -29,26 +29,26 @@
                         <img src="../static/assets/images/profile.png" alt="">
                         <h3>My Profile</h3>
                         <div class="persinfo">
-                            <ul>
+                            <div>
                                 <li><h4>Name</h4></li>
                                 <li><h4>John</h4></li>
-                            </ul>
-                            <ul>
+                            </div>
+                            <div>
                                 <li><h4>Surname</h4></li>
                                 <li><h4>Smith</h4></li>
-                            </ul>
-                            <ul>
+                            </div>
+                            <div>
                                 <li><h4>Business Type</h4></li>
                                 <li><h4>Real Estate</h4></li>
-                            </ul>
-                            <ul>
+                            </div>
+                            <div>
                                 <li><h4>Email</h4></li>
                                 <li><h4>johnsmith@gmail.com</h4></li>
-                            </ul>
-                            <ul>
+                            </div>
+                            <div>
                                 <li><h4>Phone Number</h4></li>
                                 <li><h4>(555) 555-5555</h4></li>
-                            </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="socialmedia">
@@ -63,25 +63,30 @@
                     <div class="video-list">
                         <a class="idx" onclick="slider(this)">IDX Data</a>
                         <a class="liveTraffic" onclick="slider(this)">Live Traffic</a>
-                        <a class="">FB Leads</a>
-                        <a class="">Request</a>
-                        <a class="">To-Do Tasks</a>
-                        <a class="">Website Leads</a>
+                        <a class="weblead" onclick="slider(this)">Website Leads</a>
+                        <a class="fbLeads" onclick="slider(this)">FB Leads</a>
+                        <a class="request" onclick="slider(this)">Request</a>
+                        <a class="todo" onclick="slider(this)">To-Do Tasks</a>   
                     </div>
-                    <div class="main-video" id="idx" style="display:none;">
+                    <div class="main-video" id="idx" >
                         <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" >Idx Data</a>
                     </div>
                     
-                    <div class="main-video" id="lifeTraffic">
+                    <div class="main-video" id="liveTraffic" style="display:none;">
                         <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Live Traffic</a>
                     </div> 
-                    
-                    <!-- <div class="main-video">
-                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Idx Data</a>
+                    <div class="main-video" id="weblead" style="display:none;">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Website Leads</a>
+                    </div> 
+                    <div class="main-video" id="fbLeads" style="display:none;">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Fb leads</a>
                     </div>
-                    <div class="main-video">
-                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Idx Data</a>
-                    </div>  -->
+                    <div class="main-video" id="request" style="display:none;">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Request</a>
+                    </div>  
+                    <div class="main-video" id="todo" style="display:none;">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">To-Do Tasks</a>
+                    </div>   
                 </div>
             </div>   
         </div>
@@ -92,8 +97,12 @@
         <script>
             function slider(element){
                 let content = document.getElementById(element.className);
-                $(content).siblings().css("display","none");
+                let hidden = document.getElementsByClassName('main-video');
+                for (const el of hidden) {
+                    el.style.display = "none";
+                }
                 content.style.display = "block";
+
             }
 
             // $(document).ready(function(){
@@ -107,7 +116,7 @@
 
             // document.querySelectorAll('.video-list').forEach(links =>{
             //     links.addEventListener('click',(e) =>{
-            //         e.preventDefault();
+            //         e.preventDefadivt();
             //         var src = links.getAttribute('href');
             //         document.querySelector('.video').src =src;
             //         document.querySelector('.video').play();
