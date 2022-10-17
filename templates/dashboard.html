@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/assets/css/dashboard.css">
+        <link rel="stylesheet" href="../static/assets/css/header.css">
+        <link rel="stylesheet" href="../static/assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <img src="../static/assets/images/mbslogo.png" alt="MyBrokerSearch">
+                Need Support ? Call <a href="tel:+15555555555">(555) 555-5555</a>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <button>Log Out</button>
+            </div>
+        </header>
+        <div class="dashboard">
+            <div class="title">
+                <h1>My Dashboard</h1>
+                <div class="line"></div>
+            </div>
+            <div class="gallery">
+                <div class="profile">
+                    <div class="profile-list">
+                        <img src="../static/assets/images/profile.png" alt="">
+                        <h3>My Profile</h3>
+                        <div class="persinfo">
+                            <ul>
+                                <li><h4>Name</h4></li>
+                                <li><h4>John</h4></li>
+                            </ul>
+                            <ul>
+                                <li><h4>Surname</h4></li>
+                                <li><h4>Smith</h4></li>
+                            </ul>
+                            <ul>
+                                <li><h4>Business Type</h4></li>
+                                <li><h4>Real Estate</h4></li>
+                            </ul>
+                            <ul>
+                                <li><h4>Email</h4></li>
+                                <li><h4>johnsmith@gmail.com</h4></li>
+                            </ul>
+                            <ul>
+                                <li><h4>Phone Number</h4></li>
+                                <li><h4>(555) 555-5555</h4></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="socialmedia">
+                        <i class="fa fa-facebook"><a href="https://www.facebook.com"></a></i>
+                        <i class="fa fa-instagram"><a href="https://www.instagram.com"></a></i>
+                        <i class="fa fa-linkedin"><a href="https://www.linkedin.com"></a></i>
+                        <i class="fa fa-twitter"><a href="https://www.twitter.com"></a></i>
+                        <i class="fa fa-youtube"><a href="https://www.youtube.com"></a></i>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="video-list">
+                        <a class="idx" onclick="slider(this)">IDX Data</a>
+                        <a class="liveTraffic" onclick="slider(this)">Live Traffic</a>
+                        <a class="">FB Leads</a>
+                        <a class="">Request</a>
+                        <a class="">To-Do Tasks</a>
+                        <a class="">Website Leads</a>
+                    </div>
+                    <div class="main-video" id="idx" style="display:none;">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" >Idx Data</a>
+                    </div>
+                    
+                    <div class="main-video" id="lifeTraffic">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Live Traffic</a>
+                    </div> 
+                    
+                    <!-- <div class="main-video">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Idx Data</a>
+                    </div>
+                    <div class="main-video">
+                        <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Idx Data</a>
+                    </div>  -->
+                </div>
+            </div>   
+        </div>
+    
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+            function slider(element){
+                let content = document.getElementById(element.className);
+                $(content).siblings().css("display","none");
+                content.style.display = "block";
+            }
+
+            // $(document).ready(function(){
+            //     $('.video-list a').click (function(){
+
+            //         $(this).addClass('active').siblings().removeClass('active');
+            //         let src = $(this).attr('href')
+            //         $('.main-video a').attr('src',src);
+            //     })
+            // })
+
+            // document.querySelectorAll('.video-list').forEach(links =>{
+            //     links.addEventListener('click',(e) =>{
+            //         e.preventDefault();
+            //         var src = links.getAttribute('href');
+            //         document.querySelector('.video').src =src;
+            //         document.querySelector('.video').play();
+            //     });
+            // });
+             
+        </script>
+
+    
+    </body>
+</html>
