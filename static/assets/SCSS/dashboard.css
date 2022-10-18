@@ -252,6 +252,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .task_form form .close_popup {
@@ -265,6 +268,7 @@
 }
 
 .task_form form input {
+  width: 100%;
   margin: 5px 0;
   color: #2858a1;
   border: 1px solid #2858a1;
@@ -293,6 +297,22 @@
 .task_form form input:focus-visible {
   border: 2px solid #a3bc3a;
   outline: none;
+}
+
+.task_form form .submit_form {
+  width: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title_checkbox {
+  color: #2858a1;
+  font-size: 18px;
+}
+
+.form_checkbox label {
+  color: #2858a1;
 }
 
 /* END */

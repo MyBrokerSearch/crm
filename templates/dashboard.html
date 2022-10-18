@@ -138,7 +138,7 @@
               <button class="task_popup" onclick="popup(this)">+</button>
             </div>
             <div id="task_popup" class="task_form" style="display: none">
-              <form>
+              <form action="/todo/save" method="post">
                 <a class="close_popup" onclick="popup(this)">x</a>
                 <input
                   name="fullname"
@@ -150,7 +150,6 @@
                   name="phone"
                   type="tel"
                   placeholder="123-45-678"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   required
                 />
                 <input name="email" type="email" placeholder="Email" required />
@@ -170,6 +169,35 @@
                   onblur="(this.type='text')"
                   required
                 />
+                <span class="title_checkbox"
+                  >Preferred method of contacting:</span
+                >
+                <div class="form_checkbox">
+                  <input
+                    type="checkbox"
+                    id="vehicle1"
+                    name="call"
+                    value="call"
+                  />
+                  <label for="vehicle1">Call</label><br />
+                  <input type="checkbox" id="vehicle2" name="sms" value="sms" />
+                  <label for="vehicle2">SMS</label><br />
+                  <input
+                    type="checkbox"
+                    id="vehicle3"
+                    name="email"
+                    value="email"
+                  />
+                  <label for="vehicle3">Email</label><br />
+                  <input
+                    type="checkbox"
+                    id="vehicle4"
+                    name="zoom"
+                    value="zoom"
+                  />
+                  <label for="vehicle4">Zoom</label><br />
+                </div>
+                <input type="submit" value="Submit" class="submit_form" />
               </form>
             </div>
           </div>
