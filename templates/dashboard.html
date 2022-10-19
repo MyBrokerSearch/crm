@@ -70,7 +70,7 @@
         </div>
         <div class="container">
           <div class="video-list">
-            <a class="idx service_button" onclick="slider(this)">IDX Data</a>
+            <a class="idx" onclick="slider(this)">IDX Data</a>
             <a class="liveTraffic" onclick="slider(this)">Live Traffic</a>
             <a class="weblead" onclick="slider(this)">Website Leads</a>
             <a class="fbLeads" onclick="slider(this)">FB Leads</a>
@@ -78,21 +78,17 @@
             <a class="todo" onclick="slider(this)">To-Do Tasks</a>
           </div>
           <div class="main-video" id="idx" style="display: none">
-            <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Idx Data</a>
+            <span>Idx Data</span>
           </div>
 
           <div class="main-video" id="liveTraffic" style="display: none">
-            <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU"
-              >Live Traffic</a
-            >
+            <span>Live Traffic</span>
           </div>
           <div class="main-video" id="weblead" style="display: none">
-            <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU"
-              >Website Leads</a
-            >
+            <span>Website Leads</span>
           </div>
           <div class="main-video" id="fbLeads" style="display: none">
-            <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Fb leads</a>
+            <span>Fb leads</span>
           </div>
           <div class="main-video" id="request" style="display: none">
             <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Request</a>
@@ -216,6 +212,14 @@
         }
         content.style.display = "block";
       }
+      $(".video-list a").click(function (event) {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+        } else {
+          $(".video-list a").removeClass("active");
+          $(this).addClass("active");
+        }
+      });
 
       function popup(element) {
         let hidden1 = document.getElementById("task_popup");
