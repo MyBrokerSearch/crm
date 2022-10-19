@@ -172,6 +172,7 @@
 .container .main-video {
   width: 70%;
   padding: 10px;
+  overflow-y: auto;
 }
 
 .container .main-video .service_button {
@@ -203,6 +204,7 @@
   border: 1px solid #b4c768;
   border-radius: 10px;
   background: white;
+  margin: 10px 0;
 }
 
 .info_task .info_line {
@@ -237,14 +239,37 @@
 }
 
 .task_form {
-  background: white;
-  padding: 30px;
-  border: 1px solid #a3bc3a;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.329);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .task_form form {
-  position: relative;
+  border: 1px solid #a3bc3a;
+  border-radius: 10px;
+  padding: 30px;
+  width: 500px;
+  height: 400px;
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,19 +277,27 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .task_form form .close_popup {
   position: absolute;
-  top: -25px;
-  right: -18px;
+  top: 5px;
+  right: 12px;
   font-size: 20px;
   color: #a3bc3a;
   cursor: pointer;
   font-weight: 600;
 }
 
+.task_form form .close_popup:hover {
+  color: #2858a1;
+}
+
 .task_form form input {
+  width: 100%;
   margin: 5px 0;
   color: #2858a1;
   border: 1px solid #2858a1;
@@ -293,6 +326,40 @@
 .task_form form input:focus-visible {
   border: 2px solid #a3bc3a;
   outline: none;
+}
+
+.task_form form .submit_form {
+  width: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title_checkbox {
+  color: #2858a1;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form_checkbox label {
+  color: #2858a1;
+  margin-right: 10px;
+  margin-left: 1px;
+}
+
+.submit_form {
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /* END */
