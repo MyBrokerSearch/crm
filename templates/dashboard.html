@@ -94,104 +94,156 @@
           <span>Idx Data</span>
         </div>
 
-        <div class="main-video" id="liveTraffic">
-          <span>Live Traffic</span>
-        </div>
-        <div class="main-video" id="weblead">
-          <span>Website Leads</span>
-        </div>
-        <div class="main-video" id="fbLeads">
-          <span>Fb leads</span>
-        </div>
-        <div class="main-video" id="request">
-          <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Request</a>
-        </div>
-        <div class="main-video" id="todo">
-          <div class="info_task">
-            <div class="info_line">
-              <span class="info_title">Full Name:</span>&nbsp<span class="info_desc">John Doe</span>
-            </div>
-            <div class="info_line">
-              <span class="info_title">Email:</span>
-              <span class="info_desc">johndoe@gmail.com</span>
-            </div>
-            <div class="info_line">
-              <span class="info_title">Phone:</span>&nbsp<span class="info_desc">+11234567890</span>
-            </div>
-            <div class="info_line">
-              <span class="info_title">Date:</span>&nbsp<span class="info_desc">17-10-22</span>
-            </div>
-            <div class="info_line">
-              <span class="info_title">Time:</span>&nbsp<span class="info_desc">02:00 P.M.</span>
-            </div>
-            <div class="info_line">
-              <span class="info_title">Contact By:</span>
-              &nbsp<span class="info_desc">Call</span>
-            </div>
+          <div class="main-video" id="liveTraffic">
+            <span>Live Traffic</span>
           </div>
-          <div class="task_add">
-            <button class="task_popup" onclick="popup(this)">+</button>
+          <div class="main-video" id="weblead">
+            <span>Website Leads</span>
           </div>
-          <div id="task_popup" class="task_form" style="display: none">
-            <form action="/todo/save" method="post">
-              <a class="close_popup" onclick="popup(this)">x</a>
-              <input name="fullname" type="text" placeholder="Full Name" required />
-              <input name="phone" type="tel" placeholder="123-45-67890" required />
-              <input name="email" type="email" placeholder="Email" required />
-              <input name="date" type="text" placeholder="MM/DD/YYYY" onfocus="(this.type='date')"
-                onblur="(this.type='text')" required />
-              <input name="time" type="text" placeholder="02:00 PM" onfocus="(this.type='time')"
-                onblur="(this.type='text')" required />
-              <span class="title_checkbox">Preferred method of contacting:</span>
-              <div class="form_checkbox">
-                <input type="checkbox" id="vehicle1" name="call" value="call" />
-                <label for="vehicle1">Call</label><br />
-                <input type="checkbox" id="vehicle2" name="sms" value="sms" />
-                <label for="vehicle2">SMS</label><br />
-                <input type="checkbox" id="vehicle3" name="email" value="email" />
-                <label for="vehicle3">Email</label><br />
-                <input type="checkbox" id="vehicle4" name="zoom" value="zoom" />
-                <label for="vehicle4">Zoom</label><br />
+          <div class="main-video" id="fbLeads">
+            <span>Fb leads</span>
+          </div>
+          <div class="main-video" id="request">
+            <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Request</a>
+          </div>
+          <div class="main-video" id="todo">
+            <div class="info_task">
+              <div class="info_line">
+                <span class="info_title">Full Name:</span>&nbsp<span
+                  class="info_desc"
+                  >John Doe</span
+                >
               </div>
-              <input type="submit" value="Submit" class="submit_form" />
-            </form>
+              <div class="info_line">
+                <span class="info_title">Email:</span>&nbsp<span
+                  class="info_desc"
+                  >johndoe@gmail.com</span
+                >
+              </div>
+              <div class="info_line">
+                <span class="info_title">Phone:</span>&nbsp<span
+                  class="info_desc"
+                  >+11234567890</span
+                >
+              </div>
+              <div class="info_line">
+                <span class="info_title">Date:</span>&nbsp<span
+                  class="info_desc"
+                  >17-10-22</span
+                >
+              </div>
+              <div class="info_line">
+                <span class="info_title">Time:</span>&nbsp<span
+                  class="info_desc"
+                  >02:00 P.M.</span
+                >
+              </div>
+              <div class="info_line">
+                <span class="info_title">Contact By:</span>
+                &nbsp<span class="info_desc">Call</span>
+              </div>
+            </div>
+            <div class="task_add">
+              <button class="task_popup" onclick="popup(this)">+</button>
+            </div>
+            <div id="task_popup" class="task_form" style="display: none">
+              <form action="/todo/save" method="post">
+                <a class="close_popup" onclick="popup(this)">x</a>
+                <input
+                  name="fullname"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  name="phone"
+                  type="tel"
+                  placeholder="123-45-67890"
+                  required
+                />
+                <input name="email" type="email" placeholder="Email" required />
+                <input
+                  name="date"
+                  type="text"
+                  placeholder="MM/DD/YYYY"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                  required
+                />
+                <input
+                  name="time"
+                  type="text"
+                  placeholder="02:00 PM"
+                  onfocus="(this.type='time')"
+                  onblur="(this.type='text')"
+                  required
+                />
+                <span class="title_checkbox"
+                  >Preferred method of contacting:</span
+                >
+                <div class="form_checkbox">
+                  <input
+                    type="checkbox"
+                    id="vehicle1"
+                    name="call"
+                    value="call"
+                  />
+                  <label for="vehicle1">Call</label><br />
+                  <input type="checkbox" id="vehicle2" name="sms" value="sms" />
+                  <label for="vehicle2">SMS</label><br />
+                  <input
+                    type="checkbox"
+                    id="vehicle3"
+                    name="email"
+                    value="email"
+                  />
+                  <label for="vehicle3">Email</label><br />
+                  <input
+                    type="checkbox"
+                    id="vehicle4"
+                    name="zoom"
+                    value="zoom"
+                  />
+                  <label for="vehicle4">Zoom</label><br />
+                </div>
+                <input type="submit" value="Submit" class="submit_form" />
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-  <script>
-    function slider(element) {
-      let content = document.getElementById(element.className.split(" ")[0]);
-      let hidden = document.getElementsByClassName("main-video");
+    <script>
+      function slider(element) {
+        let content = document.getElementById(element.className.split(" ")[0]);
+        let hidden = document.getElementsByClassName("main-video");
 
-      for (const el of hidden) {
-        el.style.display = "none";
+        for (const el of hidden) {
+          el.style.display = "none";
+        }
+        content.style.display = "block";
       }
-      content.style.display = "block";
-    }
 
-    $(".video-list a").click(function (event) {
-      if ($(this).hasClass("active")) {
-        $(this).removeClass("active");
-      } else {
-        $(".video-list a").removeClass("active");
-        $(this).addClass("active");
+      $(".video-list a").click(function (event) {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+        } else {
+          $(".video-list a").removeClass("active");
+          $(this).addClass("active");
+        }
+      });
+
+      function popup(element) {
+        let hidden1 = document.getElementById("task_popup");
+        if (hidden1.style.display === "block") {
+          hidden1.style.display = "none";
+        } else {
+          hidden1.style.display = "block";
+        }
       }
-    });
-
-    function popup(element) {
-      let hidden1 = document.getElementById("task_popup");
-      if (hidden1.style.display === "block") {
-        hidden1.style.display = "none";
-      } else {
-        hidden1.style.display = "block";
-      }
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
