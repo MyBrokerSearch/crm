@@ -88,6 +88,7 @@
         padding: 10px;
         overflow-y: auto;
         margin-left: 20px;
+        display: none;
     }
     .video-list {
         width: 36%;
@@ -95,6 +96,7 @@
         flex-direction: column;
         justify-content: space-between;
         a {
+            display: block;
             text-transform: uppercase;
             text-decoration: none;
             text-align: center;
@@ -115,12 +117,12 @@
                     content: "";
                     width: 0;
                     height: 0;
-                    border-top: 18px solid transparent;
-                    border-bottom: 18px solid transparent;
+                    border-top: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
                     position: absolute;
                     left: -3px;
-                    top: 16px;
-                    border-left: 44px solid white;
+                    top: 18px;
+                    border-left: 40px solid white;
                 }
             }
         }
