@@ -14,7 +14,7 @@
         color: #a3bc3a;
         text-transform: uppercase;
     }
-    div {
+    .line {
         width: 65%;
         height: 7px;
         background-color: #2858a1;
@@ -46,24 +46,37 @@
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
 }
 
-.profile-list {
-    width: 75%;
-    margin: 10px;
+.profile_list {
+    width: 80%;
+    height: 100%;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.315);
+    background-color: white;
     border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px #0000003b;
     img {
-        margin: 10px;
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        border: 2px solid #2858a1;
         object-fit: cover;
+    }
+    .profile_title {
+        color: #2858a1;
+        font-size: 25px;
+        font-weight: 500;
+    }
+}
+
+.client_block {
+    display: flex;
+    flex-direction: column;
+    .client_info {
+        display: flex;
+        justify-content: space-around;
     }
 }
 
