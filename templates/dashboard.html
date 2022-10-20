@@ -77,23 +77,23 @@
             <a class="request" onclick="slider(this)">Request</a>
             <a class="todo" onclick="slider(this)">To-Do Tasks</a>
           </div>
-          <div class="main-video" id="idx" style="display: none">
+          <div class="main-video" id="idx">
             <span>Idx Data</span>
           </div>
 
-          <div class="main-video" id="liveTraffic" style="display: none">
+          <div class="main-video" id="liveTraffic">
             <span>Live Traffic</span>
           </div>
-          <div class="main-video" id="weblead" style="display: none">
+          <div class="main-video" id="weblead">
             <span>Website Leads</span>
           </div>
-          <div class="main-video" id="fbLeads" style="display: none">
+          <div class="main-video" id="fbLeads">
             <span>Fb leads</span>
           </div>
-          <div class="main-video" id="request" style="display: none">
+          <div class="main-video" id="request">
             <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Request</a>
           </div>
-          <div class="main-video" id="todo" style="display: none">
+          <div class="main-video" id="todo">
             <div class="info_task">
               <div class="info_line">
                 <span class="info_title">Full Name:</span>&nbsp<span
@@ -205,13 +205,15 @@
 
     <script>
       function slider(element) {
-        let content = document.getElementById(element.className);
+        let content = document.getElementById(element.className.split(" ")[0]);
         let hidden = document.getElementsByClassName("main-video");
+
         for (const el of hidden) {
           el.style.display = "none";
         }
         content.style.display = "block";
       }
+
       $(".video-list a").click(function (event) {
         if ($(this).hasClass("active")) {
           $(this).removeClass("active");
