@@ -5,6 +5,7 @@ function validate() {
 
     if(username=="admin" && password=="Mobile@2020"){
         alert("Login Succesfully");
+        // window.location.href = "dashboard.html";
         return false
     } else {
         alert("Login Failed")
