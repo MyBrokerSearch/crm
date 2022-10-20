@@ -1,7 +1,8 @@
 .dashboard {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 20px 250px;
+  width: 1400px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,7 +15,7 @@
           justify-content: space-between;
 }
 
-.title h1 {
+.dashboard_text h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 80px;
   font-weight: 500;
@@ -22,15 +23,23 @@
   text-transform: uppercase;
 }
 
-.title .line {
+.dashboard_text .line {
   width: 65%;
-  height: 7px;
+  height: 3px;
   background-color: #2858a1;
   margin-left: -16em;
+  display: block;
+}
+
+.dashboard_text .dashboard_desc {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+  color: #3d3d3d;
 }
 
 .gallery {
-  width: 1400px;
+  width: 100%;
   margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,8 +106,8 @@
 }
 
 .profile_list img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -106,8 +115,20 @@
 
 .profile_list .profile_title {
   color: #2858a1;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 500;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.profile_list .profile_desc {
+  color: #2858a1;
+  font-size: 35px;
+  font-weight: 900;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-family: inherit;
 }
 
 .client_block {
@@ -118,14 +139,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .client_block .client_info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 0;
+  color: #2858a1;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .socialmedia {
@@ -139,6 +166,22 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100%;
+  background: white;
+  padding: 25px 10px;
+  border-radius: 30px;
+}
+
+.socialmedia a {
+  width: 30px;
+  position: relative;
+}
+
+.socialmedia a img {
+  width: 30px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container {
@@ -157,18 +200,40 @@
           flex-direction: row;
   -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container .main-video {
-  width: 66%;
-  padding: 10px;
+  width: 59%;
   overflow-y: auto;
-  margin-left: 20px;
   display: none;
+  padding: 30px;
+  background: white;
+  margin: 10px;
+  -webkit-box-shadow: 1px 1px 1px 1px #0000003b;
+          box-shadow: 1px 1px 1px 1px #0000003b;
+}
+
+.container .main-video::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 30px;
+}
+
+.container .main-video::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px darkgrey;
+          box-shadow: inset 0 0 6px darkgrey;
+}
+
+.container .main-video::-webkit-scrollbar-thumb {
+  background-color: #2858a1;
+  outline: 1px solid #2858a1;
+  border-radius: 30px;
 }
 
 .container .video-list {
-  width: 36%;
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +256,7 @@
   border: none;
   font-size: 24px;
   border-radius: 30px;
-  padding: 20px 40px;
+  padding: 15px 20px;
   position: relative;
   cursor: pointer;
   -webkit-box-shadow: 1px 1px 1px 1px #00000045;
@@ -206,14 +271,6 @@
 
 .container .video-list a:hover::after {
   content: "";
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  position: absolute;
-  left: -3px;
-  top: 18px;
-  border-left: 40px solid white;
 }
 
 .container .video-list .active {
@@ -229,7 +286,7 @@
   border-bottom: 15px solid transparent;
   position: absolute;
   left: -3px;
-  top: 18px;
+  top: 15px;
   border-left: 40px solid white;
 }
 
@@ -250,15 +307,26 @@
   border-radius: 10px;
   background: white;
   margin: 10px 0;
+  -webkit-box-shadow: 1px 1px 1px 1px #00000045;
+          box-shadow: 1px 1px 1px 1px #00000045;
 }
 
 .info_task .info_line {
   padding: 5px 0;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .info_task .info_title,
 .info_task .info_desc {
   color: #2858a1;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .task_add {
@@ -281,10 +349,12 @@
   border-radius: 50%;
   margin-top: 10px;
   cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px 1px #00000045;
+          box-shadow: 1px 1px 1px 1px #00000045;
 }
 
 .task_form {
-  background: rgba(0, 0, 0, 0.329);
+  background: rgba(0, 0, 0, 0.664);
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,8 +376,8 @@
   border: 1px solid #a3bc3a;
   border-radius: 10px;
   padding: 30px;
-  width: 500px;
-  height: 400px;
+  width: 650px;
+  height: 500px;
   background: white;
   position: absolute;
   left: 0;
@@ -325,16 +395,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .task_form form .close_popup {
   position: absolute;
-  top: 5px;
+  top: 0px;
   right: 12px;
-  font-size: 20px;
+  font-size: 35px;
   color: #a3bc3a;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .task_form form .close_popup:hover {
@@ -345,66 +418,123 @@
   width: 100%;
   margin: 5px 0;
   color: #2858a1;
-  border: 1px solid #2858a1;
-  border-radius: 5px;
-  -webkit-box-shadow: #2858a1 2px;
-          box-shadow: #2858a1 2px;
-  padding: 5px;
+  border: 2px solid #a3bc3a;
+  border-radius: 7px;
+  padding: 10px 5px;
+  font-size: 18px;
 }
 
 .task_form form input::-webkit-input-placeholder {
-  color: #2858a1;
+  color: #a3bc3a;
 }
 
 .task_form form input:-ms-input-placeholder {
-  color: #2858a1;
+  color: #a3bc3a;
 }
 
 .task_form form input::-ms-input-placeholder {
-  color: #2858a1;
+  color: #a3bc3a;
 }
 
 .task_form form input::placeholder {
-  color: #2858a1;
+  color: #a3bc3a;
 }
 
 .task_form form input:focus-visible {
-  border: 2px solid #a3bc3a;
+  border: 2px solid #2858a1;
   outline: none;
 }
 
 .task_form form .submit_form {
-  width: 100px;
+  width: 200px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 0;
+  color: white;
+  background: #2858a1;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 8px 0px;
+  margin-top: 10px;
+  font-family: revert;
+  cursor: pointer;
+}
+
+.task_form form .submit_form:hover {
+  background: #a3bc3a;
 }
 
 .title_checkbox {
   color: #2858a1;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 500;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.form_checkbox {
+.checkbox_block {
+  width: 61%;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
-.form_checkbox label {
-  color: #2858a1;
-  margin-right: 10px;
-  margin-left: 1px;
+.checkbox_block .form_checkbox {
+  position: relative;
+  width: 75px;
 }
 
-.submit_form {
+.checkbox_block .form_checkbox input {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
-  margin-top: 10px;
+  height: 0;
+  width: 0;
+}
+
+.checkbox_block .form_checkbox input:checked ~ .checkmark {
+  background-color: #2858a1;
+}
+
+.checkbox_block .form_checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox_block .form_checkbox .checkmark {
+  position: absolute;
+  top: -5px;
+  left: -28px;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #a3bc3a;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.checkbox_block .form_checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox_block .form_checkbox:hover input ~ .checkmark {
+  background-color: #a2bc3a46;
 }
 
 /* END */
