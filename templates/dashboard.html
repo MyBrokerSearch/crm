@@ -1,249 +1,359 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../static/assets/scss/dashboard.css" />
   <link rel="stylesheet" href="../static/assets/css/header.css" />
-  <link rel="stylesheet" href="../static/assets/css/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link
+          rel="stylesheet"
+          href="../static/assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
+  />
   <title>Dashboard</title>
 </head>
-
 <body>
-  <header>
-    <div class="navbar">
-      <img src="../static/assets/images/mbslogo.png" alt="MyBrokerSearch" />
-      Need Support ? Call <a href="tel:+15555555555">(555) 555-5555</a>
-      <i class="fa fa-bell" aria-hidden="true"></i>
-      <button>Log Out</button>
-    </div>
-  </header>
-  <div class="dashboard">
-    <div class="title">
-      <h1>My Dashboard</h1>
-      <div class="line"></div>
-    </div>
-    <div class="gallery">
-      <div class="profile">
-        <div class="profile-list">
-          <img src="../static/assets/images/profile.png" alt="" />
-          <h3>My Profile</h3>
-          <div class="persinfo">
-            <div>
-              <li>
-                <h4>Name</h4>
-              </li>
-              <li>
-                <h4>John</h4>
-              </li>
-            </div>
-            <div>
-              <li>
-                <h4>Surname</h4>
-              </li>
-              <li>
-                <h4>Smith</h4>
-              </li>
-            </div>
-            <div>
-              <li>
-                <h4>Business Type</h4>
-              </li>
-              <li>
-                <h4>Real Estate</h4>
-              </li>
-            </div>
-            <div>
-              <li>
-                <h4>Email</h4>
-              </li>
-              <li>
-                <h4>johnsmith@gmail.com</h4>
-              </li>
-            </div>
-            <div>
-              <li>
-                <h4>Phone Number</h4>
-              </li>
-              <li>
-                <h4>(555) 555-5555</h4>
-              </li>
-            </div>
+<header>
+  <div class="navbar">
+    <img src="../static/assets/images/mbslogo.png" alt="MyBrokerSearch" />
+    Need Support ? Call <a href="tel:+15555555555">(555) 555-5555</a>
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    <button>Log Out</button>
+  </div>
+</header>
+<div class="dashboard">
+  <div class="gallery">
+    <div class="profile">
+      <div class="profile_list">
+        <img src="../static/assets/images/profile1.png" alt="" />
+        <span class="profile_title">My Dashboard</span>
+        <div class="client_block">
+          <div class="client_info">
+            <span>Name:</span>
+            <span>John</span>
           </div>
-        </div>
-        <div class="socialmedia">
-          <i class="fa fa-facebook"><a href="https://www.facebook.com"></a></i>
-          <i class="fa fa-instagram"><a href="https://www.instagram.com"></a></i>
-          <i class="fa fa-linkedin"><a href="https://www.linkedin.com"></a></i>
-          <i class="fa fa-twitter"><a href="https://www.twitter.com"></a></i>
-          <i class="fa fa-youtube"><a href="https://www.youtube.com"></a></i>
-        </div>
-      </div>
-      <div class="container">
-        <div class="video-list">
-          <a class="idx" onclick="slider(this)">IDX Data</a>
-          <a class="liveTraffic" onclick="slider(this)">Live Traffic</a>
-          <a class="weblead" onclick="slider(this)">Website Leads</a>
-          <a class="fbLeads" onclick="slider(this)">FB Leads</a>
-          <a class="request" onclick="slider(this)">Request</a>
-          <a class="todo" onclick="slider(this)">To-Do Tasks</a>
-        </div>
-        <div class="main-video" id="idx">
-          <span>Idx Data</span>
-        </div>
-
-          <div class="main-video" id="liveTraffic">
-            <span>Live Traffic</span>
+          <div class="client_info">
+            <span>Surname:</span>
+            <span>Smith</span>
           </div>
-          <div class="main-video" id="weblead">
-            <span>Website Leads</span>
+          <div class="client_info">
+            <span>Business Type:</span>
+            <span>Real Estate</span>
           </div>
-          <div class="main-video" id="fbLeads">
-            <span>Fb leads</span>
+          <div class="client_info">
+            <span>Email:</span>
+            <span>johnsmith@gmail.com</span>
           </div>
-          <div class="main-video" id="request">
-            <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Request</a>
-          </div>
-          <div class="main-video" id="todo">
-            <div class="info_task">
-              <div class="info_line">
-                <span class="info_title">Full Name:</span>&nbsp<span
-                  class="info_desc"
-                  >John Doe</span
-                >
-              </div>
-              <div class="info_line">
-                <span class="info_title">Email:</span>&nbsp<span
-                  class="info_desc"
-                  >johndoe@gmail.com</span
-                >
-              </div>
-              <div class="info_line">
-                <span class="info_title">Phone:</span>&nbsp<span
-                  class="info_desc"
-                  >+11234567890</span
-                >
-              </div>
-              <div class="info_line">
-                <span class="info_title">Date:</span>&nbsp<span
-                  class="info_desc"
-                  >17-10-22</span
-                >
-              </div>
-              <div class="info_line">
-                <span class="info_title">Time:</span>&nbsp<span
-                  class="info_desc"
-                  >02:00 P.M.</span
-                >
-              </div>
-              <div class="info_line">
-                <span class="info_title">Contact By:</span>
-                &nbsp<span class="info_desc">Call</span>
-              </div>
-            </div>
-            <div class="task_add">
-              <button class="task_popup" onclick="popup(this)">+</button>
-            </div>
-            <div id="task_popup" class="task_form" style="display: none">
-              <form action="/todo/save" method="post">
-                <a class="close_popup" onclick="popup(this)">x</a>
-                <input
-                  name="fullname"
-                  type="text"
-                  placeholder="Full Name"
-                  required
-                />
-                <input
-                  name="phone"
-                  type="tel"
-                  placeholder="123-45-67890"
-                  required
-                />
-                <input name="email" type="email" placeholder="Email" required />
-                <input
-                  name="date"
-                  type="text"
-                  placeholder="MM/DD/YYYY"
-                  onfocus="(this.type='date')"
-                  onblur="(this.type='text')"
-                  required
-                />
-                <input
-                  name="time"
-                  type="text"
-                  placeholder="02:00 PM"
-                  onfocus="(this.type='time')"
-                  onblur="(this.type='text')"
-                  required
-                />
-                <span class="title_checkbox"
-                  >Preferred method of contacting:</span
-                >
-                <div class="form_checkbox">
-                  <input
-                    type="checkbox"
-                    id="vehicle1"
-                    name="call"
-                    value="call"
-                  />
-                  <label for="vehicle1">Call</label><br />
-                  <input type="checkbox" id="vehicle2" name="sms" value="sms" />
-                  <label for="vehicle2">SMS</label><br />
-                  <input
-                    type="checkbox"
-                    id="vehicle3"
-                    name="email"
-                    value="email"
-                  />
-                  <label for="vehicle3">Email</label><br />
-                  <input
-                    type="checkbox"
-                    id="vehicle4"
-                    name="zoom"
-                    value="zoom"
-                  />
-                  <label for="vehicle4">Zoom</label><br />
-                </div>
-                <input type="submit" value="Submit" class="submit_form" />
-              </form>
-            </div>
+          <div class="client_info">
+            <span>Phone Number:</span>
+            <span>(555) 555-5555</span>
           </div>
         </div>
       </div>
+      <div class="socialmedia">
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Facebook.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Messenger.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Instagram.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Twitter.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/LinkedIn.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Youtube.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Tiktok.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Pinterest.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Zillow.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Website.svg" alt=""
+        /></a>
+        <a href="facebook.com" target="_blank"
+        ><img src="../static/assets/images/Digital BC.svg" alt=""
+        /></a>
+      </div>
     </div>
+    <div class="container">
+      <div class="video-list">
+        <a class="idx" onclick="slider(this)">IDX Data</a>
+        <a class="liveTraffic" onclick="slider(this)">Live Traffic</a>
+        <a class="weblead" onclick="slider(this)">Website Leads</a>
+        <a class="fbLeads" onclick="slider(this)">FB Leads</a>
+        <a class="request" onclick="slider(this)">Request</a>
+        <a class="todo" onclick="slider(this)">To-Do Tasks</a>
+      </div>
+      <div class="main-video" id="idx">
+        <span>Idx Data</span>
+      </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <div class="main-video" id="liveTraffic">
+        <span>Live Traffic</span>
+      </div>
+      <div class="main-video" id="weblead">
+        <span>Website Leads</span>
+      </div>
+      <div class="main-video" id="fbLeads">
+        <span>Fb leads</span>
+      </div>
+      <div class="main-video" id="request">
+        <span>Request</span>
+      </div>
+      <div class="main-video" id="todo">
+        <div class="info_task">
+          <div class="info_line">
+            <span class="info_title">Full Name:</span>&nbsp<span
+                  class="info_desc"
+          >John Doe</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Email:</span>&nbsp<span
+                  class="info_desc"
+          >johndoe@gmail.com</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Phone:</span>&nbsp<span
+                  class="info_desc"
+          >+11234567890</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Date:</span>&nbsp<span
+                  class="info_desc"
+          >17-10-22</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Time:</span>&nbsp<span
+                  class="info_desc"
+          >02:00 P.M.</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Contact By:</span>
+            &nbsp<span class="info_desc">Call</span>
+          </div>
+        </div>
+        <div class="info_task">
+          <div class="info_line">
+            <span class="info_title">Full Name:</span>&nbsp<span
+                  class="info_desc"
+          >John Doe</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Email:</span>&nbsp<span
+                  class="info_desc"
+          >johndoe@gmail.com</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Phone:</span>&nbsp<span
+                  class="info_desc"
+          >+11234567890</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Date:</span>&nbsp<span
+                  class="info_desc"
+          >17-10-22</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Time:</span>&nbsp<span
+                  class="info_desc"
+          >02:00 P.M.</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Contact By:</span>
+            &nbsp<span class="info_desc">Call</span>
+          </div>
+        </div>
+        <div class="info_task">
+          <div class="info_line">
+            <span class="info_title">Full Name:</span>&nbsp<span
+                  class="info_desc"
+          >John Doe</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Email:</span>&nbsp<span
+                  class="info_desc"
+          >johndoe@gmail.com</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Phone:</span>&nbsp<span
+                  class="info_desc"
+          >+11234567890</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Date:</span>&nbsp<span
+                  class="info_desc"
+          >17-10-22</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Time:</span>&nbsp<span
+                  class="info_desc"
+          >02:00 P.M.</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Contact By:</span>
+            &nbsp<span class="info_desc">Call</span>
+          </div>
+        </div>
+        <div class="info_task">
+          <div class="info_line">
+            <span class="info_title">Full Name:</span>&nbsp<span
+                  class="info_desc"
+          >John Doe</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Email:</span>&nbsp<span
+                  class="info_desc"
+          >johndoe@gmail.com</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Phone:</span>&nbsp<span
+                  class="info_desc"
+          >+11234567890</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Date:</span>&nbsp<span
+                  class="info_desc"
+          >17-10-22</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Time:</span>&nbsp<span
+                  class="info_desc"
+          >02:00 P.M.</span
+          >
+          </div>
+          <div class="info_line">
+            <span class="info_title">Contact By:</span>
+            &nbsp<span class="info_desc">Call</span>
+          </div>
+        </div>
+        <div class="task_add">
+          <button class="task_popup" onclick="popup(this)">+</button>
+        </div>
+        <div id="task_popup" class="task_form" style="display: none">
+          <form action="/todo/save" method="post">
+            <a class="close_popup" onclick="popup(this)">x</a>
+            <input
+                    name="fullname"
+                    type="text"
+                    placeholder="Full Name"
+                    required
+            />
+            <input
+                    name="phone"
+                    type="tel"
+                    placeholder="123-45-67890"
+                    required
+            />
+            <input name="email" type="email" placeholder="Email" required />
+            <input
+                    name="date"
+                    type="text"
+                    placeholder="MM/DD/YYYY"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"
+                    required
+            />
+            <input
+                    name="time"
+                    type="text"
+                    placeholder="02:00 PM"
+                    onfocus="(this.type='time')"
+                    onblur="(this.type='text')"
+                    required
+            />
+            <span class="title_checkbox"
+            >Preferred method of contacting:</span
+            >
+            <div class="checkbox_block">
+              <label class="form_checkbox"
+              >Call
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="form_checkbox"
+              >Mail
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="form_checkbox"
+              >SMS
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="form_checkbox"
+              >Zoom
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <input type="submit" value="Submit" class="submit_form" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <script>
-      function slider(element) {
-        let content = document.getElementById(element.className.split(" ")[0]);
-        let hidden = document.getElementsByClassName("main-video");
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-        for (const el of hidden) {
-          el.style.display = "none";
-        }
-        content.style.display = "block";
-      }
+<script>
+  function slider(element) {
+    let content = document.getElementById(element.className.split(" ")[0]);
+    let hidden = document.getElementsByClassName("main-video");
 
-      $(".video-list a").click(function (event) {
-        if ($(this).hasClass("active")) {
-          $(this).removeClass("active");
-        } else {
-          $(".video-list a").removeClass("active");
-          $(this).addClass("active");
-        }
-      });
+    for (const el of hidden) {
+      el.style.display = "none";
+    }
+    content.style.display = "block";
+  }
 
-      function popup(element) {
-        let hidden1 = document.getElementById("task_popup");
-        if (hidden1.style.display === "block") {
-          hidden1.style.display = "none";
-        } else {
-          hidden1.style.display = "block";
-        }
-      }
-    </script>
-  </body>
+  $(".video-list a").click(function (event) {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(".video-list a").removeClass("active");
+      $(this).addClass("active");
+    }
+  });
+
+  function popup(element) {
+    let hidden1 = document.getElementById("task_popup");
+    if (hidden1.style.display === "block") {
+      hidden1.style.display = "none";
+    } else {
+      hidden1.style.display = "block";
+    }
+  }
+</script>
+</body>
 </html>
