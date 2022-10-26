@@ -13,22 +13,50 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <img src="../static/assets/images/mbslogo.png" alt="MyBrokerSearch" />
-        Need Support ? Call <a href="tel:+15555555555">(555) 555-5555</a>
-        <i class="fa fa-bell" aria-hidden="true"></i>
-        <button>Log Out</button>
+    <header id="header">
+      <div class="header_logo">
+        <img src="../static/assets/images/Untitled-3.png" alt="" />
+      </div>
+      <div class="header_search">
+        <div>
+          <input type="search" name="search" />
+          <button>
+            <img src="../static/assets/images/search.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="header_info">
+        <button class="header_request">REQUEST</button>
+        <div class="header_contact">
+          <a class="contact_block" href="tel:+11234567890">
+            <img src="../static/assets/images/phone.png" alt="" />
+          </a>
+          <a class="contact_block" href="">
+            <img src="../static/assets/images/notification.png" alt="" />
+          </a>
+          <a class="contact_block" href="">
+            <img src="../static/assets/images/support.png" alt="" />
+          </a>
+        </div>
+        <div class="dropdown_menu">
+          <img src="/static/assets/images/profile1.png" alt="" />
+          <button onclick="myFunction()" class="dropbtn"></button>
+          <div id="myDropdown" class="dropdown_content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- end --><!-- end -->
+    <!-- end -->
+    <!-- end -->
+    <!-- end -->
+    <!-- end -->
     <div class="dashboard">
-      <div class="dashboard_text">
-        <h1>My Dashboard</h1>
-        <span class="line"></span>
-        <span class="dashboard_desc">Welcome to MBS CRM System</span>
-      </div>
       <div class="gallery">
-        <div class="profile">
+        <!-- <div class="profile">
           <div class="profile_list">
             <img src="../static/assets/images/profile1.png" alt="" />
             <span class="profile_title">My Profile</span>
@@ -90,7 +118,7 @@
               ><img src="../static/assets/images/Digital BC.svg" alt=""
             /></a>
           </div>
-        </div>
+        </div> -->
         <div class="container">
           <div class="video-list">
             <a class="idx" onclick="slider(this)">IDX Data</a>
@@ -359,6 +387,22 @@
           hidden1.style.display = "block";
         }
       }
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown_content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
     </script>
   </body>
 </html>
