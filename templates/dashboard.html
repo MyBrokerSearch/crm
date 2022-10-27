@@ -120,31 +120,48 @@
           </div>
         </div> -->
         <div class="container">
-          <div class="video-list">
-            <a class="idx" onclick="slider(this)">IDX Data</a>
-            <a class="liveTraffic" onclick="slider(this)">Live Traffic</a>
-            <a class="weblead" onclick="slider(this)">Website Leads</a>
-            <a class="fbLeads" onclick="slider(this)">FB Leads</a>
-            <a class="request" onclick="slider(this)">Request</a>
-            <a class="todo" onclick="slider(this)">To-Do Tasks</a>
-          </div>
-          <div class="main-video" id="idx">
-            <span>Idx Data</span>
+          <div class="service_list">
+            <a class="home active" onclick="slider(this)">HOME</a>
+            <a class="idx" onclick="slider(this)">IDX DATA</a>
+            <a class="gaanalytics" onclick="slider(this)">GA ANALYTICS</a>
+            <a class="fbLeads" onclick="slider(this)">FACEBOOK LEADS</a>
+            <a class="socialmedia" onclick="slider(this)">SOCIAL MEDIA</a>
+            <a class="callendar" onclick="slider(this)">CALLENDAR</a>
+            <a class="todo" onclick="slider(this)">TO DO TASKS</a>
+            <a class="autoposting" onclick="slider(this)">AUTO POSTING</a>
+            <a class="autoemailing" onclick="slider(this)">AUTO EMAILING</a>
           </div>
 
-          <div class="main-video" id="liveTraffic">
-            <span>Live Traffic</span>
+          <div class="main_services" id="home" style="display: block">
+            <span>Home</span>
+            <table>
+              <tr>
+                <th>Full Name</th>
+                <th>From Where</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Subsribtion Date</th>
+              </tr>
+              <tr></tr>
+            </table>
           </div>
-          <div class="main-video" id="weblead">
-            <span>Website Leads</span>
+          <div class="main_services" id="idx">
+            <span>Idx Data</span>
           </div>
-          <div class="main-video" id="fbLeads">
+          <div class="main_services" id="gaanalytics">
+            <span>GA ANALYTICS</span>
+          </div>
+          <div class="main_services" id="fbLeads">
             <span>Fb leads</span>
           </div>
-          <div class="main-video" id="request">
-            <span>Request</span>
+          <div class="main_services" id="socialmedia">
+            <span>SOCIAL MEDIA</span>
           </div>
-          <div class="main-video" id="todo">
+
+          <div class="main_services" id="callendar">
+            <span>CALLENDAR</span>
+          </div>
+          <div class="main_services" id="todo">
             <div class="info_task">
               <div class="info_line">
                 <span class="info_title">Full Name:</span>&nbsp<span
@@ -353,6 +370,12 @@
               </form>
             </div>
           </div>
+          <div class="main_services" id="autoposting">
+            <span>AUTO POSTING</span>
+          </div>
+          <div class="main_services" id="autoemailing">
+            <span>AUTO EMAILING</span>
+          </div>
         </div>
       </div>
     </div>
@@ -362,7 +385,7 @@
     <script>
       function slider(element) {
         let content = document.getElementById(element.className.split(" ")[0]);
-        let hidden = document.getElementsByClassName("main-video");
+        let hidden = document.getElementsByClassName("main_services");
 
         for (const el of hidden) {
           el.style.display = "none";
@@ -370,11 +393,11 @@
         content.style.display = "block";
       }
 
-      $(".video-list a").click(function (event) {
+      $(".service_list a").click(function (event) {
         if ($(this).hasClass("active")) {
           $(this).removeClass("active");
         } else {
-          $(".video-list a").removeClass("active");
+          $(".service_list a").removeClass("active");
           $(this).addClass("active");
         }
       });
