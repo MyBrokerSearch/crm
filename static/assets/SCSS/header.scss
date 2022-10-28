@@ -12,16 +12,18 @@ header {
 .header_logo {
     position: relative;
     display: block;
-    width: 10%;
+    width: 17%;
     margin: 0 15px;
+    padding: 10px;
+    text-align: center;
     img {
-        width: 100%;
+        width: 60%;
         max-width: 100%;
         object-fit: cover;
     }
 }
 .header_search {
-    width: 60%;
+    width: 58%;
     position: relative;
     margin: 0 15px;
     display: flex;
@@ -35,14 +37,14 @@ header {
             outline: none;
             border-radius: 15px;
             font-size: 20px;
-            padding: 6px 40px;
+            padding: 3px 40px;
             border: none;
         }
         button {
             position: absolute;
-            width: 25px;
+            width: 21px;
             cursor: pointer;
-            top: 6px;
+            top: 4px;
             left: 6px;
             background: transparent;
             border: none;
@@ -61,7 +63,7 @@ header {
     margin: 0 15px;
     .header_request {
         width: 45%;
-        height: 36px;
+        height: 34px;
         background: white;
         color: black;
         border-radius: 20px;
@@ -125,8 +127,8 @@ header {
 .dropdown_content {
     display: none;
     position: absolute;
-    top: 99px;
-    right: 7px;
+    top: 98px;
+    right: 10px;
     background-color: white;
     width: 240px;
     overflow: auto;

@@ -1,0 +1,151 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/assets/scss/settings.css" />
+    <link rel="stylesheet" href="../static/assets/scss/header.css" />
+  </head>
+
+  <body>
+    <header id="header"></header>
+    <div class="setting_block">
+      <!-- username -->
+      <div class="info_block">
+        <div class="info_title">UserName</div>
+        <div class="info_desc" id="div_input_username">JohnDove</div>
+        <div class="info_edit">
+          <a class="username_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- password -->
+      <div class="info_block">
+        <div class="info_title">Password</div>
+        <div class="info_desc" id="div_input_password">********</div>
+        <div class="info_edit">
+          <a class="password_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- full name -->
+      <div class="info_block">
+        <div class="info_title">Full Name</div>
+        <div class="info_desc" id="div_input_name">John Dove</div>
+        <div class="info_edit">
+          <a class="name_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- email -->
+      <div class="info_block">
+        <div class="info_title">Email</div>
+        <div class="info_desc" id="div_input_email">Johndove@gmail.com</div>
+        <div class="info_edit">
+          <a class="email_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- phone number -->
+      <div class="info_block">
+        <div class="info_title">Phone Number</div>
+        <div class="info_desc" id="div_input_phone">+11234567890</div>
+        <div class="info_edit">
+          <a class="phone_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+
+      <!-- aaaaa -->
+    </div>
+    <!-- username -->
+    <div id="username_block" class="editor_block">
+      <div class="editor_block1">
+        <label for="edittitle">UserName</label>
+        <input type="text" name="edittitle" id="input_username" />
+        <div class="editor_buttons">
+          <a class="save_changes input_username" onclick="savechanges(this)"
+            >Save Changes</a
+          >
+          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <!-- password -->
+    <div id="password_block" class="editor_block">
+      <div class="editor_block1">
+        <label for="edittitle">Password</label>
+        <input type="password" name="edittitle" id="input_password" />
+        <div class="editor_buttons">
+          <a class="save_changes input_password" onclick="savechanges(this)"
+            >Save Changes</a
+          >
+          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <!-- fullname -->
+    <div id="name_block" class="editor_block">
+      <div class="editor_block1">
+        <label for="edittitle">Full Name</label>
+        <input type="text" name="edittitle" id="input_name" />
+        <div class="editor_buttons">
+          <a class="save_changes input_name" onclick="savechanges(this)"
+            >Save Changes</a
+          >
+          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <!-- email -->
+    <div id="email_block" class="editor_block">
+      <div class="editor_block1">
+        <label for="edittitle">Email</label>
+        <input type="email" name="edittitle" id="input_email" />
+        <div class="editor_buttons">
+          <a class="save_changes input_email" onclick="savechanges(this)"
+            >Save Changes</a
+          >
+          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <!-- phonenumber -->
+    <div id="phone_block" class="editor_block">
+      <div class="editor_block1">
+        <label for="edittitle">Email</label>
+        <input type="tel" name="edittitle" id="input_phone" />
+        <div class="editor_buttons">
+          <a class="save_changes input_phone" onclick="savechanges(this)"
+            >Save Changes</a
+          >
+          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      function editor(element) {
+        let content = document.getElementById(element.className);
+        let hidden = document.getElementsByClassName("editor_block");
+        for (const el of hidden) {
+          el.style.display = "none";
+        }
+        content.style.display = "flex";
+      }
+      function cancelsave(element) {
+        let content = document.getElementById(element.className);
+        let hidden = document.getElementsByClassName("editor_block");
+        for (const el of hidden) {
+          el.style.display = "none";
+        }
+      }
+
+      function savechanges(element) {
+        let elementId = element.className.split(" ")[1];
+        let textinput = document.getElementById(elementId).value;
+        let infoDiv = document.getElementById("div_" + elementId);
+        infoDiv.textContent = textinput;
+      }
+
+      $(function () {
+        $("#header").load("header.html");
+      });
+    </script>
+  </body>
+</html>

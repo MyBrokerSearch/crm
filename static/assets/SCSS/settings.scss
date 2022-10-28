@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.setting_block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+.info_block {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    background: #e4e4e4;
+    padding: 20px 30px;
+    .info_title {
+        color: black;
+        font-size: 22px;
+        font-family: roboto;
+        font-weight: 500;
+    }
+    .info_desc {
+        text-transform: capitalize;
+        color: #4e4f4d;
+        font-size: 22px;
+        font-family: roboto;
+        font-weight: 500;
+    }
+    .info_edit {
+        a {
+            color: #4e4f4d;
+            font-size: 22px;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+.editor_block {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.editor_block1 {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e4e4e4;
+    padding: 30px;
+
+    label {
+        color: #4e4f4d;
+        font-size: 22px;
+        font-family: roboto;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+    input {
+        text-transform: capitalize;
+        width: 60%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 8px 10px;
+    }
+    .editor_buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 34%;
+        margin-top: 20px;
+        a {
+            font-size: 16px;
+            border: 1px solid black;
+            padding: 5px 10px;
+            font-family: roboto;
+            font-weight: 400;
+            background: white;
+            cursor: pointer;
+            &:hover {
+                background-color: #e4e4e4;
+            }
+        }
+        .save_changes {
+            color: white;
+            background: #4e4f4d;
+            &:hover {
+                color: #4e4f4d;
+            }
+        }
+    }
+}

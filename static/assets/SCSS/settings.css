@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.setting_block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.info_block {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #e4e4e4;
+  padding: 20px 30px;
+}
+
+.info_block .info_title {
+  color: black;
+  font-size: 22px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+.info_block .info_desc {
+  text-transform: capitalize;
+  color: #4e4f4d;
+  font-size: 22px;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+.info_block .info_edit a {
+  color: #4e4f4d;
+  font-size: 22px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.info_block .info_edit a:hover {
+  color: black;
+}
+
+.editor_block {
+  width: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.editor_block1 {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #e4e4e4;
+  padding: 30px;
+}
+
+.editor_block1 label {
+  color: #4e4f4d;
+  font-size: 22px;
+  font-family: roboto;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.editor_block1 input {
+  text-transform: capitalize;
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 8px 10px;
+}
+
+.editor_block1 .editor_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 34%;
+  margin-top: 20px;
+}
+
+.editor_block1 .editor_buttons a {
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-family: roboto;
+  font-weight: 400;
+  background: white;
+  cursor: pointer;
+}
+
+.editor_block1 .editor_buttons a:hover {
+  background-color: #e4e4e4;
+}
+
+.editor_block1 .editor_buttons .save_changes {
+  color: white;
+  background: #4e4f4d;
+}
+
+.editor_block1 .editor_buttons .save_changes:hover {
+  color: #4e4f4d;
+}
+/*# sourceMappingURL=settings.css.map */
