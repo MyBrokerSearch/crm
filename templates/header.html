@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/assets/scss/header.css" />
+    <link rel="stylesheet" href="../static/assets/scss/dashboard.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="header_logo">
+        <img src="../static/assets/images/Untitled-3.png" alt="" />
+      </div>
+      <div class="header_search">
+        <div>
+          <input type="search" name="search" />
+          <button>
+            <img src="../static/assets/images/search.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="header_info">
+        <button class="header_request">REQUEST</button>
+        <div class="header_contact">
+          <a class="contact_block" href="tel:+11234567890">
+            <img src="../static/assets/images/phone.png" alt="" />
+          </a>
+          <a class="contact_block" href="">
+            <img src="../static/assets/images/notification.png" alt="" />
+          </a>
+          <a class="contact_block" href="">
+            <img src="../static/assets/images/support.png" alt="" />
+          </a>
+        </div>
+        <div class="dropdown_menu">
+          <img src="/static/assets/images/profile1.png" alt="" />
+          <button onclick="myFunction()" class="dropbtn"></button>
+          <div id="myDropdown" class="dropdown_content">
+            <a href="../templates/settings.html">Settings</a>
+            <a href="#help">Help</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown_content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

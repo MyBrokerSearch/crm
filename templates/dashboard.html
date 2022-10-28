@@ -13,42 +13,7 @@
     <title>Dashboards</title>
   </head>
   <body>
-    <header id="header">
-      <div class="header_logo">
-        <img src="../static/assets/images/Untitled-3.png" alt="" />
-      </div>
-      <div class="header_search">
-        <div>
-          <input type="search" name="search" />
-          <button>
-            <img src="../static/assets/images/search.png" alt="" />
-          </button>
-        </div>
-      </div>
-      <div class="header_info">
-        <button class="header_request">REQUEST</button>
-        <div class="header_contact">
-          <a class="contact_block" href="tel:+11234567890">
-            <img src="../static/assets/images/phone.png" alt="" />
-          </a>
-          <a class="contact_block" href="">
-            <img src="../static/assets/images/notification.png" alt="" />
-          </a>
-          <a class="contact_block" href="">
-            <img src="../static/assets/images/support.png" alt="" />
-          </a>
-        </div>
-        <div class="dropdown_menu">
-          <img src="/static/assets/images/profile1.png" alt="" />
-          <button onclick="myFunction()" class="dropbtn"></button>
-          <div id="myDropdown" class="dropdown_content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
     <!-- end --><!-- end -->
     <!-- end -->
     <!-- end -->
@@ -133,35 +98,91 @@
           </div>
 
           <div class="main_services" id="home" style="display: block">
-            <span>Home</span>
-            <table>
-              <tr>
-                <th>Full Name</th>
-                <th>From Where</th>
-                <th>Email Address</th>
-                <th>Phone Number</th>
-                <th>Subsribtion Date</th>
-              </tr>
-              <tr></tr>
-            </table>
+            <span class="service_title">Home</span>
+            <div class="home_block">
+              <span>NEW LEADS</span>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Full Name</th>
+                    <th>From Where</th>
+                    <th>Email Address</th>
+                    <th>Phone Number</th>
+                    <th>Subsribtion Date</th>
+                  </tr>
+                  <tr>
+                    <td>11111</td>
+                    <td>22222</td>
+                    <td>33333</td>
+                    <td>44444</td>
+                    <td>55555</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span>UPCOMING TASKS</span>
+              <div class="upcoming_tasks">
+                <a href="" class="upcoming_button">VIEW ALL TASKS >></a>
+                <div class="upcoming_block">
+                  <div>Date & Time</div>
+                  <div>Action <span>(Call, Mail, Meeting...)</span></div>
+                  <div>Full Name</div>
+                  <div>Email Address</div>
+                  <div>Phone Number</div>
+                  <div>Subsribtion Date</div>
+                </div>
+                <div class="upcoming_block">
+                  <div>Date & Time</div>
+                  <div>Action <span>(Call, Mail, Meeting...)</span></div>
+                  <div>Full Name</div>
+                  <div>Email Address</div>
+                  <div>Phone Number</div>
+                  <div>Subsribtion Date</div>
+                </div>
+                <div class="upcoming_block">
+                  <div>Date & Time</div>
+                  <div>Action <span>(Call, Mail, Meeting...)</span></div>
+                  <div>Full Name</div>
+                  <div>Email Address</div>
+                  <div>Phone Number</div>
+                  <div>Subsribtion Date</div>
+                </div>
+                <div class="upcoming_block">
+                  <div>Date & Time</div>
+                  <div>Action <span>(Call, Mail, Meeting...)</span></div>
+                  <div>Full Name</div>
+                  <div>Email Address</div>
+                  <div>Phone Number</div>
+                  <div>Subsribtion Date</div>
+                </div>
+                <div class="upcoming_block">
+                  <div>Date & Time</div>
+                  <div>Action <span>(Call, Mail, Meeting...)</span></div>
+                  <div>Full Name</div>
+                  <div>Email Address</div>
+                  <div>Phone Number</div>
+                  <div>Subsribtion Date</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="main_services" id="idx">
-            <span>Idx Data</span>
+            <span class="service_title">Idx Data</span>
           </div>
           <div class="main_services" id="gaanalytics">
-            <span>GA ANALYTICS</span>
+            <span class="service_title">GA ANALYTICS</span>
           </div>
           <div class="main_services" id="fbLeads">
-            <span>Fb leads</span>
+            <span class="service_title">Fb leads</span>
           </div>
           <div class="main_services" id="socialmedia">
-            <span>SOCIAL MEDIA</span>
+            <span class="service_title">SOCIAL MEDIA</span>
           </div>
 
           <div class="main_services" id="callendar">
-            <span>CALLENDAR</span>
+            <span class="service_title">CALLENDAR</span>
           </div>
           <div class="main_services" id="todo">
+            <span class="service_title">TO DO TASKS</span>
             <div class="info_task">
               <div class="info_line">
                 <span class="info_title">Full Name:</span>&nbsp<span
@@ -371,10 +392,10 @@
             </div>
           </div>
           <div class="main_services" id="autoposting">
-            <span>AUTO POSTING</span>
+            <span class="service_title">AUTO POSTING</span>
           </div>
           <div class="main_services" id="autoemailing">
-            <span>AUTO EMAILING</span>
+            <span class="service_title">AUTO EMAILING</span>
           </div>
         </div>
       </div>
@@ -410,22 +431,10 @@
           hidden1.style.display = "block";
         }
       }
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          var dropdowns = document.getElementsByClassName("dropdown_content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
+      $(function () {
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+      });
     </script>
   </body>
 </html>
