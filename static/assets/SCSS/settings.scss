@@ -31,6 +31,13 @@
         font-family: roboto;
         font-weight: 500;
     }
+    #input_password {
+        text-transform: none;
+    }
+    .password_settings,
+    .email_settings {
+        text-transform: none;
+    }
     .info_edit {
         a {
             color: #4e4f4d;
@@ -96,4 +103,18 @@
             }
         }
     }
+}
+////password
+#password_rules ul li {
+    /*font-size: 12px;
+        font-weight: normal;*/
+    color: #000000;
+}
+#password_rules ul li.complete {
+    color: #5db406;
+}
+span.togglePassword {
+    color: gray;
+    font-size: 12px;
+    cursor: pointer;
 }

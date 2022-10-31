@@ -50,6 +50,15 @@
   font-weight: 500;
 }
 
+.info_block #input_password {
+  text-transform: none;
+}
+
+.info_block .password_settings,
+.info_block .email_settings {
+  text-transform: none;
+}
+
 .info_block .info_edit a {
   color: #4e4f4d;
   font-size: 22px;
@@ -134,5 +143,21 @@
 
 .editor_block1 .editor_buttons .save_changes:hover {
   color: #4e4f4d;
+}
+
+#password_rules ul li {
+  /*font-size: 12px;
+        font-weight: normal;*/
+  color: #000000;
+}
+
+#password_rules ul li.complete {
+  color: #5db406;
+}
+
+span.togglePassword {
+  color: gray;
+  font-size: 12px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=settings.css.map */
