@@ -28,14 +28,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background: #e4e4e4;
   padding: 20px 30px;
 }
 
 .info_block .info_title {
+  width: 25%;
   color: black;
   font-size: 22px;
   font-family: roboto;
@@ -43,6 +43,13 @@
 }
 
 .info_block .info_desc {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: capitalize;
   color: #4e4f4d;
   font-size: 22px;
@@ -54,9 +61,29 @@
   text-transform: none;
 }
 
-.info_block .password_settings,
+.info_block .password_settings input {
+  text-transform: none;
+  background: transparent;
+  border: none;
+  color: #4e4f4d;
+  font-size: 22px;
+  font-family: roboto;
+  font-weight: 500;
+  text-align: center;
+}
+
 .info_block .email_settings {
   text-transform: none;
+}
+
+.info_block .info_edit {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .info_block .info_edit a {
@@ -94,6 +121,42 @@
   padding: 30px;
 }
 
+.editor_block1 .password_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.editor_block1 .password_flex .togglePassword {
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.editor_block1 #password_rules h4 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: roboto;
+}
+
+.editor_block1 #password_rules ul li {
+  font-family: roboto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  list-style-type: none;
+  margin: 3px 0;
+}
+
+.editor_block1 #password_rules ul .complete {
+  color: #5db406;
+}
+
 .editor_block1 label {
   color: #4e4f4d;
   font-size: 22px;
@@ -111,14 +174,14 @@
   padding: 8px 10px;
 }
 
+.editor_block1 .validate {
+  text-transform: none;
+}
+
 .editor_block1 .editor_buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 34%;
   margin-top: 20px;
 }
 
@@ -139,25 +202,124 @@
 .editor_block1 .editor_buttons .save_changes {
   color: white;
   background: #4e4f4d;
+  margin-right: 10px;
 }
 
 .editor_block1 .editor_buttons .save_changes:hover {
   color: #4e4f4d;
 }
 
-#password_rules ul li {
-  /*font-size: 12px;
-        font-weight: normal;*/
-  color: #000000;
+@media (max-width: 1450px) {
+  .setting_block {
+    padding: 10px;
+  }
+  .info_block {
+    width: 65%;
+  }
 }
 
-#password_rules ul li.complete {
-  color: #5db406;
+@media (max-width: 1024px) {
+  .setting_block {
+    margin-top: 20px;
+  }
+  .info_block {
+    width: 90%;
+  }
+  .editor_block1 {
+    width: 70%;
+    padding: 20px;
+  }
+  .editor_block1 input {
+    width: 100%;
+    height: 28px;
+  }
 }
 
-span.togglePassword {
-  color: gray;
-  font-size: 12px;
-  cursor: pointer;
+@media (max-width: 768px) {
+  .info_block {
+    width: 100%;
+  }
+  .info_block .info_title {
+    font-size: 19px;
+  }
+  .info_block .info_desc {
+    font-size: 19px;
+  }
+  .info_block .info_edit a {
+    font-size: 19px;
+  }
+  .editor_block1 {
+    width: 90%;
+  }
+  .editor_block1 label {
+    font-size: 19px;
+  }
+  .editor_block1 #password_rules h4 {
+    font-size: 17px;
+  }
+  .editor_block1 #password_rules ul li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 610px) {
+  .setting_block {
+    margin-top: 5px;
+  }
+  .info_block {
+    padding: 10px;
+  }
+  .info_block .info_title {
+    font-size: 16px;
+  }
+  .info_block .info_desc {
+    font-size: 16px;
+  }
+  .info_block .info_edit a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 410px) {
+  .setting_block {
+    margin-top: 0px;
+    padding: 2;
+  }
+  .info_block {
+    padding: 10px;
+  }
+  .info_block .info_title {
+    font-size: 15px;
+    width: 30%;
+  }
+  .info_block .info_desc {
+    width: 60%;
+    font-size: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info_block .info_edit {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info_block .info_edit a {
+    font-size: 15px;
+  }
+  .editor_block1 {
+    width: 100%;
+    margin: 5px;
+  }
+  .editor_block1 label {
+    font-size: 16px;
+  }
+  .editor_block1 #password_rules h4 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .editor_block1 #password_rules ul li {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=settings.css.map */

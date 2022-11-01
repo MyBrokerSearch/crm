@@ -13,7 +13,9 @@
       <!-- username -->
       <div class="info_block">
         <div class="info_title">UserName</div>
-        <div class="info_desc" id="div_input_username">JohnDove</div>
+        <div class="info_desc info_username" id="div_input_username">
+          JohnDove
+        </div>
         <div class="info_edit">
           <a class="username_block" onclick="editor(this)">Edit</a>
         </div>
@@ -22,7 +24,7 @@
       <div class="info_block">
         <div class="info_title">Password</div>
         <div class="info_desc password_settings" id="div_input_password">
-          ********
+          <input type="password" value="********" disabled="disabled" />
         </div>
         <div class="info_edit">
           <a class="password_block" onclick="editor(this)">Edit</a>
@@ -31,7 +33,7 @@
       <!-- full name -->
       <div class="info_block">
         <div class="info_title">Full Name</div>
-        <div class="info_desc" id="div_input_name">John Dove</div>
+        <div class="info_desc info_fullname" id="div_input_name">John Dove</div>
         <div class="info_edit">
           <a class="name_block" onclick="editor(this)">Edit</a>
         </div>
@@ -63,7 +65,13 @@
     <div id="username_block" class="editor_block">
       <div class="editor_block1">
         <label for="edittitle">UserName</label>
-        <input type="text" name="edittitle" id="input_username" />
+        <input
+          class="username_nospaces"
+          type="text"
+          name="edittitle"
+          id="input_username"
+          onkeyup="nospaces(this)"
+        />
         <div class="editor_buttons">
           <a class="save_changes input_username" onclick="savechanges(this)"
             >Save Changes</a
@@ -75,15 +83,18 @@
     <!-- password -->
     <div id="password_block" class="editor_block">
       <div class="editor_block1">
-        <label for="edittitle">Password</label>
-        <input
-          type="password"
-          class="validate password"
-          name="edittitle"
-          id="input_password"
-          value=""
-        />
-        <span class="togglePassword">Show Password</span>
+        <label for="edittitle">Password:</label>
+        <div class="password_flex">
+          <input
+            type="password"
+            class="validate password"
+            name="edittitle"
+            id="input_password"
+            value=""
+            onkeyup="nospaces(this)"
+          />
+          <span class="togglePassword">Show</span>
+        </div>
         <label>Confirm Password:</label>
         <input
           type="password"
@@ -97,8 +108,8 @@
           <ul>
             <li class="password_length">At least 8 characters</li>
             <li class="password_uppercase">At least 1 uppercase letter</li>
-            <li class="password_number">at least one number</li>
-            <li class="password_match">password and confirmation must match</li>
+            <li class="password_number">At least one number</li>
+            <li class="password_match">Password and confirmation must match</li>
           </ul>
         </div>
         <div class="editor_buttons">
@@ -113,7 +124,12 @@
     <div id="name_block" class="editor_block">
       <div class="editor_block1">
         <label for="edittitle">Full Name</label>
-        <input type="text" name="edittitle" id="input_name" />
+        <input
+          type="text"
+          name="edittitle"
+          id="input_name"
+          pattern="[A-Za-z]"
+        />
         <div class="editor_buttons">
           <a class="save_changes input_name" onclick="savechanges(this)"
             >Save Changes</a
@@ -158,16 +174,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
       function editor(element) {
-        let content = document.getElementById(element.className);
-        let hidden = document.getElementsByClassName("editor_block");
+        var content = document.getElementById(element.className);
+        var hidden = document.getElementsByClassName("editor_block");
         for (const el of hidden) {
           el.style.display = "none";
         }
         content.style.display = "flex";
       }
+
       function cancelsave(element) {
-        let content = document.getElementById(element.className);
-        let hidden = document.getElementsByClassName("editor_block");
+        var content = document.getElementById(element.className);
+        var hidden = document.getElementsByClassName("editor_block");
         for (const el of hidden) {
           el.style.display = "none";
         }
@@ -178,22 +195,45 @@
         let infoDiv = document.getElementById("div_" + elementId);
         let input = document.getElementById(elementId);
         let testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        var content = document.getElementById(element.className);
+        var hidden = document.getElementsByClassName("editor_block");
 
         if (testEmail.test(input.value) && elementId == "input_email") {
           infoDiv.textContent = textinput;
+          for (const el of hidden) {
+            el.style.display = "none";
+          }
         }
         if (elementId == "input_phone" && !input.value.includes("_")) {
           $(".desc_phone").text(input.value);
+          for (const el of hidden) {
+            el.style.display = "none";
+          }
         }
         if (
           $("#input_password").val() == $("#conf").val() &&
-          $("#input_password").val() !== "" &&
+          $("#input_password").val() !== " " &&
           $(".password_length").hasClass("complete") &&
           $(".password_uppercase").hasClass("complete") &&
           $(".password_number").hasClass("complete") &&
           $(".password_match").hasClass("complete")
         ) {
-          $(".password_settings").text($("#input_password").val());
+          $(".password_settings > input").val($("#input_password").val());
+          for (const el of hidden) {
+            el.style.display = "none";
+          }
+        }
+        if (elementId == "input_name") {
+          $(".info_fullname").text(input.value);
+          for (const el of hidden) {
+            el.style.display = "none";
+          }
+        }
+        if (elementId == "input_username") {
+          $(".info_username").text(input.value);
+          for (const el of hidden) {
+            el.style.display = "none";
+          }
         }
       }
 
@@ -537,6 +577,12 @@
       ///PASSWORD
       var validateInput = $("input.validate");
       $(document).ready(function () {
+        $(".username_nospaces").keyup(function () {
+          this.value = this.value.replace(/\s/g, "");
+        });
+        $(".validate").keyup(function () {
+          this.value = this.value.replace(/\s/g, "");
+        });
         var validateInput = $("input.validate");
 
         function validateInputs() {
@@ -584,6 +630,22 @@
       });
       ///END
 
+      // FULLNAME
+      const alphaOnlyInput = document.getElementById("input_name"),
+        alphaOnlyPattern = new RegExp("^[a-zA-Z ]+$");
+      let previousValue = "";
+      alphaOnlyInput.addEventListener("input", (e) => {
+        let currentValue = alphaOnlyInput.value;
+        if (
+          e.inputType.includes("delete") ||
+          alphaOnlyPattern.test(currentValue)
+        ) {
+          previousValue = currentValue;
+        }
+
+        alphaOnlyInput.value = previousValue;
+      });
+      // END
       $(function () {
         $("#header").load("header.html");
       });
