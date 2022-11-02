@@ -23,23 +23,35 @@
   padding: 50px;
 }
 
+.setting_block .settings_title {
+  width: 50%;
+  padding-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: auto;
+}
+
 .info_block {
-  width: 40%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background: #e4e4e4;
+  border-top: 1px solid rgba(0, 0, 0, 0.589);
   padding: 20px 30px;
+}
+
+.info_block:last-child {
+  border-bottom: 1px solid black;
 }
 
 .info_block .info_title {
   width: 25%;
   color: black;
-  font-size: 22px;
-  font-family: roboto;
-  font-weight: 500;
+  font-size: 21px;
+  font-family: auto;
+  font-weight: 600;
 }
 
 .info_block .info_desc {
@@ -53,7 +65,7 @@
   text-transform: capitalize;
   color: #4e4f4d;
   font-size: 22px;
-  font-family: roboto;
+  font-family: auto;
   font-weight: 500;
 }
 
@@ -67,7 +79,7 @@
   border: none;
   color: #4e4f4d;
   font-size: 22px;
-  font-family: roboto;
+  font-family: auto;
   font-weight: 500;
   text-align: center;
 }
@@ -87,8 +99,10 @@
 }
 
 .info_block .info_edit a {
-  color: #4e4f4d;
-  font-size: 22px;
+  color: #216fdb;
+  font-size: 21px;
+  font-family: auto;
+  font-weight: 400;
   text-decoration: none;
   cursor: pointer;
 }
@@ -109,7 +123,7 @@
 }
 
 .editor_block1 {
-  width: 35%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +131,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #e4e4e4;
+  background-color: #f1f1f196;
   padding: 30px;
 }
 
@@ -141,11 +155,11 @@
   margin: 10px 0 5px 0;
   font-size: 18px;
   font-weight: 600;
-  font-family: roboto;
+  font-family: auto;
 }
 
 .editor_block1 #password_rules ul li {
-  font-family: roboto;
+  font-family: auto;
   font-size: 16px;
   font-weight: 400;
   color: #000000;
@@ -160,7 +174,7 @@
 .editor_block1 label {
   color: #4e4f4d;
   font-size: 22px;
-  font-family: roboto;
+  font-family: auto;
   font-weight: 500;
   margin: 10px 0;
 }
@@ -189,7 +203,7 @@
   font-size: 16px;
   border: 1px solid black;
   padding: 5px 10px;
-  font-family: roboto;
+  font-family: auto;
   font-weight: 400;
   background: white;
   cursor: pointer;
@@ -213,6 +227,11 @@
   .setting_block {
     padding: 10px;
   }
+  .setting_block .settings_title {
+    width: 65%;
+    padding-bottom: 25px;
+    font-size: 28px;
+  }
   .info_block {
     width: 65%;
   }
@@ -221,6 +240,11 @@
 @media (max-width: 1024px) {
   .setting_block {
     margin-top: 20px;
+  }
+  .setting_block .settings_title {
+    width: 90%;
+    padding-bottom: 20px;
+    font-size: 25px;
   }
   .info_block {
     width: 90%;
@@ -236,6 +260,9 @@
 }
 
 @media (max-width: 768px) {
+  .setting_block .settings_title {
+    width: 100%;
+  }
   .info_block {
     width: 100%;
   }
@@ -284,6 +311,9 @@
   .setting_block {
     margin-top: 0px;
     padding: 2;
+  }
+  .setting_block .settings_title {
+    font-size: 22px;
   }
   .info_block {
     padding: 10px;

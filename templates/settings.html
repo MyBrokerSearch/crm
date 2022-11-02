@@ -10,6 +10,7 @@
   <body>
     <header id="header"></header>
     <div class="setting_block">
+      <span class="settings_title">General Account Settings</span>
       <!-- username -->
       <div class="info_block">
         <div class="info_title">UserName</div>
@@ -223,7 +224,7 @@
             el.style.display = "none";
           }
         }
-        if (elementId == "input_name") {
+        if (elementId == "input_name" && !input.value == "") {
           $(".info_fullname").text(input.value);
           for (const el of hidden) {
             el.style.display = "none";
