@@ -115,16 +115,26 @@ body::-webkit-scrollbar-thumb {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   position: absolute;
-  left: -6px;
+  left: -9px;
   top: 15px;
   border-left: 30px solid white;
 }
 
 /* TO DO TASK */
-.info_task {
+.info_task_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info_task_block .info_task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -136,12 +146,12 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid #4e4f4d;
   border-radius: 10px;
   background: white;
-  margin: 10px 0;
+  margin: 10px 15px;
   -webkit-box-shadow: 1px 1px 1px 1px #00000045;
           box-shadow: 1px 1px 1px 1px #00000045;
 }
 
-.info_task .info_line {
+.info_task_block .info_task .info_line {
   padding: 5px 0;
   width: 100%;
   -webkit-box-pack: justify;
@@ -152,8 +162,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
 }
 
-.info_task .info_title,
-.info_task .info_desc {
+.info_task_block .info_task .info_title,
+.info_task_block .info_task .info_desc {
   color: #4e4f4d;
   font-size: 20px;
   font-weight: 500;
@@ -484,5 +494,137 @@ table tbody tr td:last-child {
   font-size: 14px;
   color: #858585;
   text-transform: capitalize;
+}
+
+.mobile_menu {
+  position: relative;
+  width: 0;
+  height: 400px;
+}
+
+.mobile_menu .service_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  position: absolute;
+  top: 14%;
+  left: -200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  padding: 10px;
+  background: #0b2556;
+}
+
+.mobile_menu .service_list a {
+  color: white;
+  font-size: 17px;
+  font-family: auto;
+  margin: 3px 0;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.mobile_menu .service_list a:hover {
+  background: rgba(255, 255, 255, 0.253);
+}
+
+.mobile_menu .service_list .active {
+  background: rgba(255, 255, 255, 0.253);
+  -webkit-box-shadow: 1px 1px 1px 1px #00000045;
+          box-shadow: 1px 1px 1px 1px #00000045;
+}
+
+.mobile_menu .check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  width: 3rem;
+  opacity: 0;
+  z-index: 3;
+}
+
+.mobile_menu .check:hover {
+  cursor: pointer;
+}
+
+.mobile_menu .check:checked ~ .service_list {
+  left: 10px;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.mobile_menu .check:checked ~ .ham-menu {
+  padding-left: 14px;
+}
+
+.mobile_menu .check:checked ~ .ham-menu .line1 {
+  display: block;
+  -webkit-transform: rotate(52deg);
+          transform: rotate(52deg);
+}
+
+.mobile_menu .check:checked ~ .ham-menu .line2 {
+  opacity: 0;
+}
+
+.mobile_menu .check:checked ~ .ham-menu .line3 {
+  display: block;
+  -webkit-transform: rotate(-52deg);
+          transform: rotate(-52deg);
+}
+
+.mobile_menu .ham-menu {
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: black;
+}
+
+.mobile_menu .ham-menu .line {
+  background-color: white;
+  border-radius: 1em;
+  width: 30px;
+  height: 4px;
+}
+
+.mobile_menu .ham-menu .line1 {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.mobile_menu .ham-menu .line3 {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 /*# sourceMappingURL=dashboard.css.map */
