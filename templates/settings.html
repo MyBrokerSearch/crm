@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/assets/scss/settings.css" />
     <link rel="stylesheet" href="../static/assets/scss/header.css" />
+    <link
+      rel="stylesheet"
+      href="../static/assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -15,10 +19,30 @@
       <div class="info_block">
         <div class="info_title">UserName</div>
         <div class="info_desc info_username" id="div_input_username">
-          JohnDove
+          JohnDove123
         </div>
         <div class="info_edit">
           <a class="username_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- username popup -->
+      <div id="username_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">UserName</label>
+          <input
+            class="username_nospaces"
+            type="text"
+            name="edittitle"
+            id="input_username"
+            onkeyup="nospaces(this)"
+            required
+          />
+          <div class="editor_buttons">
+            <a class="save_changes input_username" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
         </div>
       </div>
       <!-- password -->
@@ -31,12 +55,74 @@
           <a class="password_block" onclick="editor(this)">Edit</a>
         </div>
       </div>
+      <!-- password popup -->
+      <div id="password_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Password:</label>
+          <div class="password_flex">
+            <input
+              type="password"
+              class="validate password"
+              name="edittitle"
+              id="input_password"
+              value=""
+              onkeyup="nospaces(this)"
+              required
+            />
+            <span class="togglePassword">Show</span>
+          </div>
+          <label>Confirm Password:</label>
+          <input
+            type="password"
+            id="conf"
+            class="validate passwordConfirm"
+            name="confirmPassword"
+            value=""
+          />
+          <div id="password_rules">
+            <h4>Passwords must meet these requirements:</h4>
+            <ul>
+              <li class="password_length">At least 8 characters</li>
+              <li class="password_uppercase">At least 1 uppercase letter</li>
+              <li class="password_number">At least one number</li>
+              <li class="password_match">
+                Password and confirmation must match
+              </li>
+            </ul>
+          </div>
+          <div class="editor_buttons">
+            <a class="save_changes input_password" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
       <!-- full name -->
       <div class="info_block">
         <div class="info_title">Full Name</div>
         <div class="info_desc info_fullname" id="div_input_name">John Dove</div>
         <div class="info_edit">
           <a class="name_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- fullname popup -->
+      <div id="name_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Full Name</label>
+          <input
+            type="text"
+            name="edittitle"
+            id="input_name"
+            pattern="[A-Za-z]"
+            required
+          />
+          <div class="editor_buttons">
+            <a class="save_changes input_name" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
         </div>
       </div>
       <!-- email -->
@@ -49,6 +135,19 @@
           <a class="email_block" onclick="editor(this)">Edit</a>
         </div>
       </div>
+      <!-- email popup -->
+      <div id="email_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Email</label>
+          <input type="email" name="edittitle" id="input_email" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_email" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
       <!-- phone number -->
       <div class="info_block">
         <div class="info_title">Phone Number</div>
@@ -59,597 +158,265 @@
           <a class="phone_block" onclick="editor(this)">Edit</a>
         </div>
       </div>
-
-      <!-- aaaaa -->
-    </div>
-    <!-- username -->
-    <div id="username_block" class="editor_block">
-      <div class="editor_block1">
-        <label for="edittitle">UserName</label>
-        <input
-          class="username_nospaces"
-          type="text"
-          name="edittitle"
-          id="input_username"
-          onkeyup="nospaces(this)"
-        />
-        <div class="editor_buttons">
-          <a class="save_changes input_username" onclick="savechanges(this)"
-            >Save Changes</a
-          >
-          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
-        </div>
-      </div>
-    </div>
-    <!-- password -->
-    <div id="password_block" class="editor_block">
-      <div class="editor_block1">
-        <label for="edittitle">Password:</label>
-        <div class="password_flex">
+      <!-- phonenumber popup -->
+      <div id="phone_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Phone Number</label>
           <input
-            type="password"
-            class="validate password"
+            type="tel"
             name="edittitle"
-            id="input_password"
-            value=""
-            onkeyup="nospaces(this)"
+            id="input_phone"
+            required
+            placeholder="+1"
+            value="+1 (___) ___-____"
+            pattern="^\+1(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{3}-?[0-9]{4}$"
           />
-          <span class="togglePassword">Show</span>
+          <div class="editor_buttons">
+            <a class="save_changes input_phone" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
         </div>
-        <label>Confirm Password:</label>
-        <input
-          type="password"
-          id="conf"
-          class="validate passwordConfirm"
-          name="confirmPassword"
-          value=""
-        />
-        <div id="password_rules">
-          <h4>Passwords must meet these requirements:</h4>
-          <ul>
-            <li class="password_length">At least 8 characters</li>
-            <li class="password_uppercase">At least 1 uppercase letter</li>
-            <li class="password_number">At least one number</li>
-            <li class="password_match">Password and confirmation must match</li>
-          </ul>
+      </div>
+
+      <!-- social media -->
+      <!-- facebook -->
+      <div class="info_block">
+        <div class="info_title">Facebook</div>
+        <div class="info_desc info_facebook" id="div_input_facebook">
+          https://www.facebook.com/
         </div>
-        <div class="editor_buttons">
-          <a class="save_changes input_password" onclick="savechanges(this)"
-            >Save Changes</a
-          >
-          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <div class="info_edit">
+          <a class="facebook_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- facebook popup -->
+      <div id="facebook_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Facebook Link</label>
+          <input type="tel" name="edittitle" id="input_facebook" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_facebook" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- messenger -->
+      <div class="info_block">
+        <div class="info_title">Messenger</div>
+        <div class="info_desc info_messenger" id="div_input_messenger">
+          https://www.messenger.com/
+        </div>
+        <!-- messenger -->
+        <div class="info_edit">
+          <a class="messenger_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- messenger popup -->
+      <div id="messenger_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Messenger Link</label>
+          <input type="tel" name="edittitle" id="input_messenger" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_messenger" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- instagram -->
+      <div class="info_block">
+        <div class="info_title">Instagram</div>
+        <div class="info_desc info_instagram" id="div_input_instagram">
+          https://www.instagram.com/
+        </div>
+        <div class="info_edit">
+          <a class="instagram_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- instagram popup -->
+      <div id="instagram_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Instagram Link</label>
+          <input type="tel" name="edittitle" id="input_instagram" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_instagram" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- twitter -->
+      <div class="info_block">
+        <div class="info_title">Twitter</div>
+        <div class="info_desc info_twitter" id="div_input_twitter">
+          https://www.twitter.com/
+        </div>
+        <div class="info_edit">
+          <a class="twitter_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- twitter popup -->
+      <div id="twitter_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Twitter Link</label>
+          <input type="tel" name="edittitle" id="input_twitter" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_twitter" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- linkedin -->
+      <div class="info_block">
+        <div class="info_title">Linkedin</div>
+        <div class="info_desc info_linkedin" id="div_input_linkedin">
+          https://www.linkedin.com/
+        </div>
+        <div class="info_edit">
+          <a class="linkedin_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- linkedin popup -->
+      <div id="linkedin_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Linkedin Link</label>
+          <input type="tel" name="edittitle" id="input_linkedin" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_linkedin" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- tiktok -->
+      <div class="info_block">
+        <div class="info_title">TikTok</div>
+        <div class="info_desc info_tiktok" id="div_input_tiktok">
+          https://www.tiktok.com/
+        </div>
+        <div class="info_edit">
+          <a class="tiktok_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- tiktok popup -->
+      <div id="tiktok_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">TikTok Link</label>
+          <input type="tel" name="edittitle" id="input_tiktok" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_tiktok" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- youtube -->
+      <div class="info_block">
+        <div class="info_title">YouTube</div>
+        <div class="info_desc info_youtube" id="div_input_youtube">
+          https://www.youtube.com/
+        </div>
+        <div class="info_edit">
+          <a class="youtube_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- youtube popup-->
+      <div id="youtube_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">YouTube Link</label>
+          <input type="tel" name="edittitle" id="input_youtube" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_youtube" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- digital -->
+      <div class="info_block">
+        <div class="info_title">Digital</div>
+        <div class="info_desc info_digital" id="div_input_digital">
+          https://www.agentecard.com/design-2/
+        </div>
+        <div class="info_edit">
+          <a class="digital_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- digital popup -->
+      <div id="digital_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Digital Link</label>
+          <input type="tel" name="edittitle" id="input_digital" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_digital" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- website -->
+      <div class="info_block">
+        <div class="info_title">Website</div>
+        <div class="info_desc info_website" id="div_input_website">
+          https://demo127.tcy.nsq.mybluehost.me/
+        </div>
+        <div class="info_edit">
+          <a class="website_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- website popup -->
+      <div id="website_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Website Link</label>
+          <input type="tel" name="edittitle" id="input_website" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_website" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- zillow -->
+      <div class="info_block">
+        <div class="info_title">Zillow</div>
+        <div class="info_desc info_zillow" id="div_input_zillow">
+          https://www.zillow.com/
+        </div>
+        <div class="info_edit">
+          <a class="zillow_block" onclick="editor(this)">Edit</a>
+        </div>
+      </div>
+      <!-- zillow popup -->
+      <div id="zillow_block" class="editor_block">
+        <div class="editor_block1">
+          <label for="edittitle">Zillow Link</label>
+          <input type="tel" name="edittitle" id="input_zillow" required />
+          <div class="editor_buttons">
+            <a class="save_changes input_zillow" onclick="savechanges(this)"
+              >Save Changes</a
+            >
+            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+          </div>
         </div>
       </div>
     </div>
-    <!-- fullname -->
-    <div id="name_block" class="editor_block">
-      <div class="editor_block1">
-        <label for="edittitle">Full Name</label>
-        <input
-          type="text"
-          name="edittitle"
-          id="input_name"
-          pattern="[A-Za-z]"
-        />
-        <div class="editor_buttons">
-          <a class="save_changes input_name" onclick="savechanges(this)"
-            >Save Changes</a
-          >
-          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
-        </div>
-      </div>
-    </div>
-    <!-- email -->
-    <div id="email_block" class="editor_block">
-      <div class="editor_block1">
-        <label for="edittitle">Email</label>
-        <input type="email" name="edittitle" id="input_email" />
-        <div class="editor_buttons">
-          <a class="save_changes input_email" onclick="savechanges(this)"
-            >Save Changes</a
-          >
-          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
-        </div>
-      </div>
-    </div>
-    <!-- phonenumber -->
-    <div id="phone_block" class="editor_block">
-      <div class="editor_block1">
-        <label for="edittitle">Phone Number</label>
-        <input
-          type="tel"
-          name="edittitle"
-          id="input_phone"
-          placeholder="+1"
-          value="+1 (___) ___-____"
-          pattern="^\+1(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{3}-?[0-9]{4}$"
-        />
-        <div class="editor_buttons">
-          <a class="save_changes input_phone" onclick="savechanges(this)"
-            >Save Changes</a
-          >
-          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
-        </div>
-      </div>
-    </div>
+
+    <!--popups -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-      function editor(element) {
-        var content = document.getElementById(element.className);
-        var hidden = document.getElementsByClassName("editor_block");
-        for (const el of hidden) {
-          el.style.display = "none";
-        }
-        content.style.display = "flex";
-      }
-
-      function cancelsave(element) {
-        var content = document.getElementById(element.className);
-        var hidden = document.getElementsByClassName("editor_block");
-        for (const el of hidden) {
-          el.style.display = "none";
-        }
-      }
-      function savechanges(element) {
-        let elementId = element.className.split(" ")[1];
-        let textinput = document.getElementById(elementId).value;
-        let infoDiv = document.getElementById("div_" + elementId);
-        let input = document.getElementById(elementId);
-        let testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
-        var content = document.getElementById(element.className);
-        var hidden = document.getElementsByClassName("editor_block");
-
-        if (testEmail.test(input.value) && elementId == "input_email") {
-          infoDiv.textContent = textinput;
-          for (const el of hidden) {
-            el.style.display = "none";
-          }
-        }
-        if (elementId == "input_phone" && !input.value.includes("_")) {
-          $(".desc_phone").text(input.value);
-          for (const el of hidden) {
-            el.style.display = "none";
-          }
-        }
-        if (
-          $("#input_password").val() == $("#conf").val() &&
-          $("#input_password").val() !== " " &&
-          $(".password_length").hasClass("complete") &&
-          $(".password_uppercase").hasClass("complete") &&
-          $(".password_number").hasClass("complete") &&
-          $(".password_match").hasClass("complete")
-        ) {
-          $(".password_settings > input").val($("#input_password").val());
-          for (const el of hidden) {
-            el.style.display = "none";
-          }
-        }
-        if (elementId == "input_name" && !input.value == "") {
-          $(".info_fullname").text(input.value);
-          for (const el of hidden) {
-            el.style.display = "none";
-          }
-        }
-        if (elementId == "input_username") {
-          $(".info_username").text(input.value);
-          for (const el of hidden) {
-            el.style.display = "none";
-          }
-        }
-      }
-
-      ////PHONE
-      window.onload = (function () {
-        MaskedInput({
-          elm: document.getElementById("input_phone"),
-          format: "+1 (___) ___-____",
-          separator: "+1 (   )-",
-        });
-      })(
-        (function (a) {
-          a.MaskedInput = function (f) {
-            if (!f || !f.elm || !f.format) {
-              return null;
-            }
-            if (!(this instanceof a.MaskedInput)) {
-              return new a.MaskedInput(f);
-            }
-            var o = this,
-              d = f.elm,
-              s = f.format,
-              i = f.allowed || "0123456789",
-              h =
-                f.allowedfx ||
-                function () {
-                  return true;
-                },
-              p = f.separator || "/:-",
-              n = f.typeon || "_YMDhms",
-              c = f.onbadkey || function () {},
-              q = f.onfilled || function () {},
-              w = f.badkeywait || 0,
-              A = f.hasOwnProperty("preserve") ? !!f.preserve : true,
-              l = true,
-              y = false,
-              t = s,
-              j = (function () {
-                if (window.addEventListener) {
-                  return function (E, C, D, B) {
-                    E.addEventListener(C, D, B === undefined ? false : B);
-                  };
-                }
-                if (window.attachEvent) {
-                  return function (D, B, C) {
-                    D.attachEvent("on" + B, C);
-                  };
-                }
-                return function (D, B, C) {
-                  D["on" + B] = C;
-                };
-              })(),
-              u = function () {
-                for (var B = d.value.length - 1; B >= 0; B--) {
-                  for (var D = 0, C = n.length; D < C; D++) {
-                    if (d.value[B] === n[D]) {
-                      return false;
-                    }
-                  }
-                }
-                return true;
-              },
-              x = function (C) {
-                try {
-                  C.focus();
-                  if (C.selectionStart >= 0) {
-                    return C.selectionStart;
-                  }
-                  if (document.selection) {
-                    var B = document.selection.createRange();
-                    return -B.moveStart("character", -C.value.length);
-                  }
-                  return -1;
-                } catch (D) {
-                  return -1;
-                }
-              },
-              b = function (C, E) {
-                try {
-                  if (C.selectionStart) {
-                    C.focus();
-                    C.setSelectionRange(E, E);
-                  } else {
-                    if (C.createTextRange) {
-                      var B = C.createTextRange();
-                      B.move("character", E);
-                      B.select();
-                    }
-                  }
-                } catch (D) {
-                  return false;
-                }
-                return true;
-              },
-              m = function (D) {
-                D = D || window.event;
-                var C = "",
-                  E = D.which,
-                  B = D.type;
-                if (E === undefined || E === null) {
-                  E = D.keyCode;
-                }
-                if (E === undefined || E === null) {
-                  return "";
-                }
-                switch (E) {
-                  case 8:
-                    C = "bksp";
-                    break;
-                  case 46:
-                    C = B === "keydown" ? "del" : ".";
-                    break;
-                  case 16:
-                    C = "shift";
-                    break;
-                  case 0:
-                  case 9:
-                  case 13:
-                    C = "etc";
-                    break;
-                  case 37:
-                  case 38:
-                  case 39:
-                  case 40:
-                    C =
-                      !D.shiftKey &&
-                      D.charCode !== 39 &&
-                      D.charCode !== undefined
-                        ? "etc"
-                        : String.fromCharCode(E);
-                    break;
-                  default:
-                    C = String.fromCharCode(E);
-                    break;
-                }
-                return C;
-              },
-              v = function (B, C) {
-                if (B.preventDefault) {
-                  B.preventDefault();
-                }
-                B.returnValue = C || false;
-              },
-              k = function (B) {
-                var D = x(d),
-                  F = d.value,
-                  E = "",
-                  C = true;
-                switch (C) {
-                  case i.indexOf(B) !== -1:
-                    D = D + 1;
-                    if (D > s.length) {
-                      return false;
-                    }
-                    while (p.indexOf(F.charAt(D - 1)) !== -1 && D <= s.length) {
-                      D = D + 1;
-                    }
-                    if (!h(B, D)) {
-                      c(B);
-                      return false;
-                    }
-                    E = F.substr(0, D - 1) + B + F.substr(D);
-                    if (
-                      i.indexOf(F.charAt(D)) === -1 &&
-                      n.indexOf(F.charAt(D)) === -1
-                    ) {
-                      D = D + 1;
-                    }
-                    break;
-                  case B === "bksp":
-                    D = D - 1;
-                    if (D < 0) {
-                      return false;
-                    }
-                    while (
-                      i.indexOf(F.charAt(D)) === -1 &&
-                      n.indexOf(F.charAt(D)) === -1 &&
-                      D > 1
-                    ) {
-                      D = D - 1;
-                    }
-                    E = F.substr(0, D) + s.substr(D, 1) + F.substr(D + 1);
-                    break;
-                  case B === "del":
-                    if (D >= F.length) {
-                      return false;
-                    }
-                    while (
-                      p.indexOf(F.charAt(D)) !== -1 &&
-                      F.charAt(D) !== ""
-                    ) {
-                      D = D + 1;
-                    }
-                    E = F.substr(0, D) + s.substr(D, 1) + F.substr(D + 1);
-                    D = D + 1;
-                    break;
-                  case B === "etc":
-                    return true;
-                  default:
-                    return false;
-                }
-                d.value = "";
-                d.value = E;
-                b(d, D);
-                return false;
-              },
-              g = function (B) {
-                if (
-                  i.indexOf(B) === -1 &&
-                  B !== "bksp" &&
-                  B !== "del" &&
-                  B !== "etc"
-                ) {
-                  var C = x(d);
-                  y = true;
-                  c(B);
-                  setTimeout(function () {
-                    y = false;
-                    b(d, C);
-                  }, w);
-                  return false;
-                }
-                return true;
-              },
-              z = function (C) {
-                if (!l) {
-                  return true;
-                }
-                C = C || event;
-                if (y) {
-                  v(C);
-                  return false;
-                }
-                var B = m(C);
-                if ((C.metaKey || C.ctrlKey) && (B === "X" || B === "V")) {
-                  v(C);
-                  return false;
-                }
-                if (C.metaKey || C.ctrlKey) {
-                  return true;
-                }
-                if (d.value === "") {
-                  d.value = s;
-                  b(d, 0);
-                }
-                if (B === "bksp" || B === "del") {
-                  k(B);
-                  v(C);
-                  return false;
-                }
-                return true;
-              },
-              e = function (C) {
-                if (!l) {
-                  return true;
-                }
-                C = C || event;
-                if (y) {
-                  v(C);
-                  return false;
-                }
-                var B = m(C);
-                if (B === "etc" || C.metaKey || C.ctrlKey || C.altKey) {
-                  return true;
-                }
-                if (B !== "bksp" && B !== "del" && B !== "shift") {
-                  if (!g(B)) {
-                    v(C);
-                    return false;
-                  }
-                  if (k(B)) {
-                    if (u()) {
-                      q();
-                    }
-                    v(C, true);
-                    return true;
-                  }
-                  if (u()) {
-                    q();
-                  }
-                  v(C);
-                  return false;
-                }
-                return false;
-              },
-              r = function () {
-                if (
-                  !d.tagName ||
-                  (d.tagName.toUpperCase() !== "INPUT" &&
-                    d.tagName.toUpperCase() !== "TEXTAREA")
-                ) {
-                  return null;
-                }
-                if (!A || d.value === "") {
-                  d.value = s;
-                }
-                j(d, "keydown", function (B) {
-                  z(B);
-                });
-                j(d, "keypress", function (B) {
-                  e(B);
-                });
-                j(d, "focus", function () {
-                  t = d.value;
-                });
-                j(d, "blur", function () {
-                  if (d.value !== t && d.onchange) {
-                    d.onchange();
-                  }
-                });
-                return o;
-              };
-            o.resetField = function () {
-              d.value = s;
-            };
-            o.setAllowed = function (B) {
-              i = B;
-              o.resetField();
-            };
-            o.setFormat = function (B) {
-              s = B;
-              o.resetField();
-            };
-            o.setSeparator = function (B) {
-              p = B;
-              o.resetField();
-            };
-            o.setTypeon = function (B) {
-              n = B;
-              o.resetField();
-            };
-            o.setEnabled = function (B) {
-              l = B;
-            };
-            return r();
-          };
-        })(window)
-      );
-      ///END
-
-      ///PASSWORD
-      var validateInput = $("input.validate");
-      $(document).ready(function () {
-        $(".username_nospaces").keyup(function () {
-          this.value = this.value.replace(/\s/g, "");
-        });
-        $(".validate").keyup(function () {
-          this.value = this.value.replace(/\s/g, "");
-        });
-        var validateInput = $("input.validate");
-
-        function validateInputs() {
-          var password = $("#input_password").val(),
-            conf = $("#conf").val(),
-            all_pass = true;
-
-          var uppercase = password.match(/[A-Z]/),
-            number = password.match(/[0-9]/);
-
-          if (password.length < 8) {
-            $(".password_length").removeClass("complete");
-            all_pass = false;
-          } else $(".password_length").addClass("complete");
-
-          if (uppercase) $(".password_uppercase").addClass("complete");
-          else {
-            $(".password_uppercase").removeClass("complete");
-            all_pass = false;
-          }
-
-          if (number) $(".password_number").addClass("complete");
-          else {
-            $(".password_number").removeClass("complete");
-            all_pass = false;
-          }
-
-          if (password == conf && password != "")
-            $(".password_match").addClass("complete");
-          else {
-            $(".password_match").removeClass("complete");
-            all_pass = false;
-          }
-        }
-        validateInput.each(validateInputs).on("keyup", validateInputs);
-
-        function showPassword() {
-          if (validateInput.attr("type") === "password") {
-            validateInput.attr("type", "text");
-          } else if (validateInput.attr("type") === "text") {
-            validateInput.attr("type", "password");
-          }
-        }
-        $(".togglePassword").on("click", showPassword);
-      });
-      ///END
-
-      // FULLNAME
-      const alphaOnlyInput = document.getElementById("input_name"),
-        alphaOnlyPattern = new RegExp("^[a-zA-Z ]+$");
-      let previousValue = "";
-      alphaOnlyInput.addEventListener("input", (e) => {
-        let currentValue = alphaOnlyInput.value;
-        if (
-          e.inputType.includes("delete") ||
-          alphaOnlyPattern.test(currentValue)
-        ) {
-          previousValue = currentValue;
-        }
-
-        alphaOnlyInput.value = previousValue;
-      });
-      // END
-      $(function () {
-        $("#header").load("header.html");
-      });
-    </script>
+    <script src="../static/assets/js/settings.js"></script>
   </body>
 </html>

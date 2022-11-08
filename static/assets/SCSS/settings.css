@@ -19,8 +19,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 50px;
-  padding: 50px;
+  margin: 50px 0;
 }
 
 .setting_block .settings_title {
@@ -38,12 +37,12 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border-top: 1px solid rgba(0, 0, 0, 0.589);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.589);
   padding: 20px 30px;
 }
 
-.info_block:last-child {
-  border-bottom: 1px solid black;
+.info_block:nth-last-child(30) {
+  border-top: 1px solid black !important;
 }
 
 .info_block .info_title {

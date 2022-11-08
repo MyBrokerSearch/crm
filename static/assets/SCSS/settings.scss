@@ -9,8 +9,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    padding: 50px;
+    margin: 50px 0;
+
     .settings_title {
         width: 50%;
         padding-bottom: 30px;
@@ -23,10 +23,10 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid rgba(0, 0, 0, 0.589);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.589);
     padding: 20px 30px;
-    &:last-child {
-        border-bottom: 1px solid black;
+    &:nth-last-child(30) {
+        border-top: 1px solid black !important;
     }
     .info_title {
         width: 25%;

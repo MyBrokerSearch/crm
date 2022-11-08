@@ -19,46 +19,190 @@
         </div>
       </div>
       <div class="header_info">
-        <button class="header_request">REQUEST</button>
+        <a
+          href="https://www.mybrokersearch.com/request-form"
+          target="_blank"
+          class="header_request"
+          >REQUEST</a
+        >
         <div class="header_contact">
-          <a class="contact_block" href="tel:+11234567890">
-            <img src="../static/assets/images/phone.png" alt="" />
-          </a>
           <a class="contact_block" href="">
             <img src="../static/assets/images/notification.png" alt="" />
-          </a>
-          <a class="contact_block" href="">
-            <img src="../static/assets/images/support.png" alt="" />
           </a>
         </div>
         <div class="dropdown_menu">
           <img src="/static/assets/images/profile1.png" alt="" />
           <button onclick="myFunction()" class="dropbtn"></button>
           <div id="myDropdown" class="dropdown_content">
-            <a href="../templates/settings.html">Settings</a>
-            <a href="#help">Help</a>
+            <a class="dropdown_profile" onclick="openPopup(this)">
+              <img src="../static/assets/images/profile1.png" alt="" />
+              <span>John Dove</span>
+            </a>
+            <a href="../templates/settings.html">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+              <span>Settings Profile</span>
+            </a>
+            <a href="#" class="help_button" onclick="helpSupport()">
+              <div>
+                <i class="fa fa-question" aria-hidden="true"></i>
+                <span>Help & Support </span>
+              </div>
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              <span>Log Out</span></a
+            >
+          </div>
+          <div class="help_block" id="help_style">
+            <div class="help_title">
+              <button
+                onclick="helpSupportBack()"
+                class="dropbtn fa fa-angle-left"
+              ></button>
+              <span>Help & Support</span>
+            </div>
+            <a onclick="openPopup(this)" class="call_request">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>Call Request</span>
+            </a>
+            <a onclick="openPopup(this)" class="report_problem">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              <span>Report a problem</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
+    <div class="popup_block" id="dropdown_profile">
+      <div class="dropdown_profile_popup">
+        <a class="close_popup" onclick="closePopup(this)"> x </a>
+        <p class="popup_title">Profile</p>
+        <div class="profile_block">
+          <div class="profile_img">
+            <img src="/static/assets/images/profile1.png" alt="" />
+          </div>
+          <div class="profile_info">
+            <p>John Dove</p>
+            <span>Username: (JohnDove123)</span>
+            <span>Real Estate</span>
+            <div class="contact_info">
+              <div>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <a href="tel:+11234567890">+11234567890</a>
+              </div>
+              <div>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:johndove@gmail.com">johndove@gmail.com</a>
+              </div>
+            </div>
+            <div class="info_social">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="../static/assets/images/Facebook.svg" alt="" />
+              </a>
+              <a href="https://www.messenger.com/" target="_blank">
+                <img src="../static/assets/images/Messenger.svg" alt="" />
+              </a>
+              <a href="https://instagram.com/" target="_blank">
+                <img src="../static/assets/images/Instagram.svg" alt="" />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img src="../static/assets/images/Twitter.svg" alt="" />
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank">
+                <img src="../static/assets/images/LinkedIn.svg" alt="" />
+              </a>
+              <a href="https://www.tiktok.com/" target="_blank">
+                <img src="../static/assets/images/Tiktok.svg" alt="" />
+              </a>
+              <a href="https://www.youtube.com/" target="_blank">
+                <img src="../static/assets/images/Youtube.svg" alt="" />
+              </a>
+              <a href="https://www.agentecard.com/design-2" target="_blank">
+                <img src="../static/assets/images/Digital BC.svg" alt="" />
+              </a>
+              <a href="https://demo.tcy.nsq.mybluehost.me/" target="_blank">
+                <img src="../static/assets/images/Website.svg" alt="" />
+              </a>
+              <a href="https://www.zillow.com/" target="_blank">
+                <img src="../static/assets/images/Zillow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup_block" id="call_request">
+      <div class="call_request_popup">
+        <a class="close_popup" onclick="closePopup(this)"> x </a>
+        <p class="popup_title">Call Request</p>
+        <form action="call request">
+          <div class="call_input_block">
+            <input
+              type="text"
+              name="name"
+              required
+              size="10"
+              placeholder="Fisrt Name"
+              id="call_request_input"
+            />
+            <input
+              type="text"
+              name="name"
+              required
+              size="10"
+              placeholder="Last Name"
+              id="call_request_input"
+            />
+          </div>
+          <div class="call_input_block">
+            <input
+              type="email"
+              name="name"
+              required
+              size="10"
+              placeholder="Email"
+              id="call_request_input"
+            />
+            <input
+              type="tel"
+              name="name"
+              required
+              size="10"
+              placeholder="Phone Number"
+              id="call_request_input"
+            />
+          </div>
+          <input class="request_call" type="submit" value="Request a Call" />
+        </form>
+      </div>
+    </div>
+    <div class="popup_block" id="report_problem">
+      <div class="report_problem_popup">
+        <a class="close_popup" onclick="closePopup(this)"> x </a>
+        <p class="popup_title">Report a Problem</p>
+        <form action="report a problem">
+          <input
+            type="email"
+            name="name"
+            required
+            size="10"
+            placeholder="Subject:"
+            id="subject_email"
+          />
+          <textarea
+            name="textarea"
+            id="textarea"
+            cols="30"
+            rows="10"
+            placeholder="Write your message..."
+            required
+          ></textarea>
+          <input class="subject_email" type="submit" value="Send" />
+        </form>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          var dropdowns = document.getElementsByClassName("dropdown_content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-    </script>
+    <script src="../static/assets/js/header.js"></script>
   </body>
 </html>
