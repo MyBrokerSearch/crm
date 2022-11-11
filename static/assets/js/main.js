@@ -25,7 +25,14 @@ $(".service_list a").click(function (event) {
     $(this).addClass("active");
   }
 });
-
+$(".service_list_mobile a").click(function (event) {
+  if ($(this).hasClass("active")) {
+    $(this).removeClass("active");
+  } else {
+    $(".service_list_mobile a").removeClass("active");
+    $(this).addClass("active");
+  }
+});
 $(".bottom_blocks_buttons a").click(function (event) {
   if ($(this).hasClass("active")) {
     $(this).removeClass("active");

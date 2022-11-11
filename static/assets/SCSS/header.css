@@ -1,9 +1,5 @@
-body {
-  margin: 0;
-  position: relative;
-}
-
 #header1 {
+  width: 100%;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +10,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 22px;
+  padding: 5px 0;
   background: #0b2556;
 }
 
@@ -28,7 +24,7 @@ body {
 }
 
 .header_logo img {
-  width: 70%;
+  width: 100%;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -104,6 +100,15 @@ body {
   padding: 4px 0;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header_info .header_request:hover {
@@ -115,7 +120,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 10%;
+  width: 45px;
   position: relative;
   overflow: hidden;
   -ms-flex-pack: distribute;
@@ -742,6 +747,30 @@ body {
      object-fit: cover;
 }
 
+@media (max-width: 1400px) {
+  .dropdown_profile_popup {
+    width: 70%;
+  }
+  .dropdown_profile_popup p {
+    font-size: 40px;
+  }
+  .dropdown_profile_popup .profile_block .profile_img {
+    width: 40%;
+  }
+  .dropdown_profile_popup .profile_block .profile_img img {
+    width: 80%;
+  }
+  .dropdown_profile_popup .profile_block .profile_info p {
+    font-size: 30px;
+  }
+  .dropdown_profile_popup .profile_block .profile_info span {
+    font-size: 23px;
+  }
+  .dropdown_profile_popup .profile_block .profile_info .info_social {
+    margin-top: 13px;
+  }
+}
+
 @media (max-width: 1024px) {
   .header_search {
     width: 40%;
@@ -750,8 +779,8 @@ body {
     width: 80%;
   }
   .header_search div input {
-    font-size: 18px;
-    padding: 3px 30px;
+    font-size: 13px;
+    padding: 3px 20px;
   }
   .header_search div button {
     width: 15px;
@@ -761,11 +790,10 @@ body {
   }
   .header_info .header_request {
     width: 45%;
-    height: 30px;
     font-size: 14px;
   }
   .header_contact {
-    width: 25%;
+    width: 35px;
   }
   .dropdown_menu {
     width: 20%;
@@ -781,7 +809,20 @@ body {
   .dropdown_content {
     top: 56px;
     right: 7px;
-    width: 160px;
+    width: 275px;
+  }
+  .call_request_popup,
+  .report_problem_popup {
+    width: 50%;
+  }
+  .dropdown_profile_popup .profile_block .profile_info .info_social {
+    width: 100%;
+  }
+}
+
+@media (max-width: 868px) {
+  .dropdown_profile_popup {
+    width: 90%;
   }
 }
 
@@ -803,6 +844,29 @@ body {
   }
   .dropdown_content {
     top: 48px;
+    width: 240px;
+  }
+  .call_request_popup,
+  .report_problem_popup {
+    width: 80%;
+  }
+}
+
+@media (max-width: 676px) {
+  .dropdown_profile_popup {
+    width: 95%;
+  }
+  .dropdown_profile_popup p {
+    font-size: 36px;
+  }
+  .dropdown_profile_popup .profile_block .profile_info span {
+    font-size: 20px;
+  }
+  .dropdown_profile_popup .profile_block .profile_info .contact_info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -834,7 +898,7 @@ body {
     margin: 0 5px;
   }
   .header_contact {
-    width: 40%;
+    width: 30px;
   }
   .header_contact .contact_block {
     margin: 0 2%;
@@ -884,6 +948,18 @@ body {
   .dropdown_content {
     top: 46px;
   }
+  .dropdown_profile_popup .profile_block .profile_info .info_social a {
+    margin: 2px;
+  }
+  .dropdown_profile_popup .profile_block .profile_img {
+    width: 30%;
+  }
+  .dropdown_profile_popup .profile_block .profile_info {
+    width: 70%;
+  }
+  .dropdown_profile_popup .profile_block .profile_img img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 440px) {
@@ -892,6 +968,10 @@ body {
   }
   .header_search {
     width: 35%;
+  }
+  .header_search div button {
+    top: 4px;
+    left: 3px;
   }
   .header_info {
     width: 60%;
@@ -906,6 +986,9 @@ body {
   }
   .dropdown_content {
     top: 42px;
+  }
+  .dropdown_profile_popup {
+    padding: 5px;
   }
 }
 
@@ -931,6 +1014,17 @@ body {
   }
   .header_contact .contact_block {
     margin: 0 6%;
+  }
+  .call_request_popup,
+  .report_problem_popup {
+    width: 95%;
+  }
+  .dropdown_profile_popup .profile_block .profile_info span {
+    text-align: center;
+  }
+  .dropdown_profile_popup .profile_block .profile_info .contact_info div {
+    margin: 2px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=header.css.map */

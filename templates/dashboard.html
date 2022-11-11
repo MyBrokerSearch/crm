@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/assets/scss/dashboard.css" />
+    <link rel="stylesheet" href="../static/assets/scss/settings.css" />
     <link
       rel="stylesheet"
       href="../static/assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
@@ -21,6 +22,25 @@
     <!-- end -->
 
     <div class="container">
+      <div class="mobile_menu">
+        <input type="checkbox" name="mobile_button" class="check" />
+        <div class="ham-menu">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <div class="service_list_mobile">
+          <a class="home active" onclick="slider(this)">Home</a>
+          <a class="idx" onclick="slider(this)">IDX Data</a>
+          <a class="gaanalytics" onclick="slider(this)">Ga Analytics</a>
+          <a class="fbLeads" onclick="slider(this)">Facebook Leads</a>
+          <a class="socialmedia" onclick="slider(this)">Social Media</a>
+          <a class="callendar" onclick="slider(this)">Callendar</a>
+          <a class="todo" onclick="slider(this)">To Do Tasks</a>
+          <a class="autoposting" onclick="slider(this)">Auto Posting</a>
+          <a class="autoemailing" onclick="slider(this)">Auto Emailing</a>
+        </div>
+      </div>
       <div class="service_list">
         <a class="home active" onclick="slider(this)">HOME</a>
         <a class="idx" onclick="slider(this)">IDX DATA</a>
@@ -451,12 +471,18 @@
         <span class="service_title">GA ANALYTICS</span>
         <div class="gaanalytics_block">
           <span class="gaanalytics_title">Audience Overview</span>
-          <div class="gaanalytics_calendar">
+          <form action="">
+            <button class="ga_date_button">Now</button>
+            <button class="ga_date_button">Week</button>
+            <button class="ga_date_button">Month</button>
+            <button class="ga_date_button">Year</button>
+          </form>
+          <!-- <div class="gaanalytics_calendar">
             Start Date:
             <input type="text" id="my_date_picker1" value="dd/mm/yy" />
             End Date:
             <input type="text" id="my_date_picker2" value="dd/mm/yy" />
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="main_services" id="fbLeads">
@@ -666,25 +692,6 @@
         <span class="service_title">AUTO EMAILING</span>
       </div>
     </div>
-    <!-- <div class="mobile_menu">
-      <input type="checkbox" name="mobile_button" class="check" />
-      <div class="ham-menu">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-      </div>
-      <div class="service_list">
-        <a class="home active" onclick="slider(this)">Home</a>
-        <a class="idx" onclick="slider(this)">IDX Data</a>
-        <a class="gaanalytics" onclick="slider(this)">Ga Analytics</a>
-        <a class="fbLeads" onclick="slider(this)">Facebook Leads</a>
-        <a class="socialmedia" onclick="slider(this)">Social Media</a>
-        <a class="callendar" onclick="slider(this)">Callendar</a>
-        <a class="todo" onclick="slider(this)">To Do Tasks</a>
-        <a class="autoposting" onclick="slider(this)">Auto Posting</a>
-        <a class="autoemailing" onclick="slider(this)">Auto Emailing</a>
-      </div>
-    </div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>

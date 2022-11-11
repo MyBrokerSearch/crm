@@ -5,7 +5,6 @@
 }
 
 .setting_block {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,6 +19,8 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 50px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .setting_block .settings_title {
@@ -319,19 +320,22 @@
   }
   .info_block .info_title {
     font-size: 15px;
-    width: 30%;
+    width: 20%;
+    margin: 0 5px;
   }
   .info_block .info_desc {
-    width: 60%;
+    width: 70%;
     font-size: 15px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0 5px;
   }
   .info_block .info_edit {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0 5px;
   }
   .info_block .info_edit a {
     font-size: 15px;

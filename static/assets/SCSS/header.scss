@@ -1,14 +1,10 @@
-body {
-    margin: 0;
-    position: relative;
-}
-
 #header1 {
+    width: 100%;
     margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 22px;
+    padding: 5px 0;
     background: #0b2556;
 }
 .header_logo {
@@ -19,7 +15,7 @@ body {
     text-align: center;
     padding: 2px 0;
     img {
-        width: 70%;
+        width: 100%;
         max-width: 100%;
         object-fit: cover;
     }
@@ -76,6 +72,9 @@ body {
         text-align: center;
         padding: 4px 0;
         text-decoration-line: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:hover {
             background: black;
             color: white;
@@ -84,7 +83,7 @@ body {
 }
 .header_contact {
     display: flex;
-    width: 10%;
+    width: 45px;
     position: relative;
     overflow: hidden;
     justify-content: space-around;
@@ -532,14 +531,41 @@ body {
     }
 }
 
+@media (max-width: 1400px) {
+    .dropdown_profile_popup {
+        width: 70%;
+        p {
+            font-size: 40px;
+        }
+        .profile_block {
+            .profile_img {
+                width: 40%;
+                img {
+                    width: 80%;
+                }
+            }
+            .profile_info {
+                p {
+                    font-size: 30px;
+                }
+                span {
+                    font-size: 23px;
+                }
+                .info_social {
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 1024px) {
     .header_search {
         width: 40%;
         div {
             width: 80%;
             input {
-                font-size: 18px;
-                padding: 3px 30px;
+                font-size: 13px;
+                padding: 3px 20px;
             }
             button {
                 width: 15px;
@@ -550,12 +576,11 @@ body {
         width: 45%;
         .header_request {
             width: 45%;
-            height: 30px;
             font-size: 14px;
         }
     }
     .header_contact {
-        width: 25%;
+        width: 35px;
     }
     .dropdown_menu {
         width: 20%;
@@ -571,7 +596,19 @@ body {
     .dropdown_content {
         top: 56px;
         right: 7px;
-        width: 160px;
+        width: 275px;
+    }
+    .call_request_popup,
+    .report_problem_popup {
+        width: 50%;
+    }
+    .dropdown_profile_popup .profile_block .profile_info .info_social {
+        width: 100%;
+    }
+}
+@media (max-width: 868px) {
+    .dropdown_profile_popup {
+        width: 90%;
     }
 }
 @media (max-width: 768px) {
@@ -592,6 +629,25 @@ body {
     }
     .dropdown_content {
         top: 48px;
+        width: 240px;
+    }
+    .call_request_popup,
+    .report_problem_popup {
+        width: 80%;
+    }
+}
+@media (max-width: 676px) {
+    .dropdown_profile_popup {
+        width: 95%;
+    }
+    .dropdown_profile_popup p {
+        font-size: 36px;
+    }
+    .dropdown_profile_popup .profile_block .profile_info span {
+        font-size: 20px;
+    }
+    .dropdown_profile_popup .profile_block .profile_info .contact_info {
+        flex-direction: column;
     }
 }
 @media (max-width: 612px) {
@@ -622,7 +678,7 @@ body {
         }
     }
     .header_contact {
-        width: 40%;
+        width: 30px;
         .contact_block {
             margin: 0 2%;
         }
@@ -673,6 +729,18 @@ body {
     .dropdown_content {
         top: 46px;
     }
+    .dropdown_profile_popup .profile_block .profile_info .info_social a {
+        margin: 2px;
+    }
+    .dropdown_profile_popup .profile_block .profile_img {
+        width: 30%;
+    }
+    .dropdown_profile_popup .profile_block .profile_info {
+        width: 70%;
+    }
+    .dropdown_profile_popup .profile_block .profile_img img {
+        width: 100%;
+    }
 }
 @media (max-width: 440px) {
     #header1 {
@@ -680,6 +748,10 @@ body {
     }
     .header_search {
         width: 35%;
+        div button {
+            top: 4px;
+            left: 3px;
+        }
     }
     .header_info {
         width: 60%;
@@ -696,6 +768,9 @@ body {
     }
     .dropdown_content {
         top: 42px;
+    }
+    .dropdown_profile_popup {
+        padding: 5px;
     }
 }
 @media (max-width: 360px) {
@@ -722,5 +797,16 @@ body {
         .contact_block {
             margin: 0 6%;
         }
+    }
+    .call_request_popup,
+    .report_problem_popup {
+        width: 95%;
+    }
+    .dropdown_profile_popup .profile_block .profile_info span {
+        text-align: center;
+    }
+    .dropdown_profile_popup .profile_block .profile_info .contact_info div {
+        margin: 2px;
+        text-align: center;
     }
 }
