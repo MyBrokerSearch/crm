@@ -54,49 +54,6 @@
           <a class="password_block" onclick="editor(this)">Edit</a>
         </div>
       </div>
-      <!-- password popup -->
-      <div id="password_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Password:</label>
-          <div class="password_flex">
-            <input
-              type="password"
-              class="validate password"
-              name="edittitle"
-              id="input_password"
-              value=""
-              onkeyup="nospaces(this)"
-              required
-            />
-            <span class="togglePassword">Show</span>
-          </div>
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            id="conf"
-            class="validate passwordConfirm"
-            name="confirmPassword"
-            value=""
-          />
-          <div id="password_rules">
-            <h4>Passwords must meet these requirements:</h4>
-            <ul>
-              <li class="password_length">At least 8 characters</li>
-              <li class="password_uppercase">At least 1 uppercase letter</li>
-              <li class="password_number">At least one number</li>
-              <li class="password_match">
-                Password and confirmation must match
-              </li>
-            </ul>
-          </div>
-          <div class="editor_buttons">
-            <a class="save_changes input_password" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
-          </div>
-        </div>
-      </div>
       <!-- full name -->
       <div class="info_block">
         <div class="info_title">Full Name</div>
@@ -180,239 +137,301 @@
       </div>
 
       <!-- social media -->
-      <!-- facebook -->
-      <div class="info_block">
-        <div class="info_title">Facebook</div>
-        <div class="info_desc info_facebook" id="div_input_facebook">
-          https://www.facebook.com/
+      <div class="social_dropdown">
+        <div class="social_block">
+          <span>Social Media Links</span>
+          <a class="social_media_drop">Edit</a>
         </div>
-        <div class="info_edit">
-          <a class="facebook_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- facebook popup -->
-      <div id="facebook_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Facebook Link</label>
-          <input type="tel" name="edittitle" id="input_facebook" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_facebook" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- facebook -->
+        <div class="info_block_social">
+          <div class="info_title">Facebook</div>
+          <div class="info_desc info_facebook" id="div_input_facebook">
+            https://www.facebook.com/
+          </div>
+          <div class="info_edit">
+            <a class="facebook_block" onclick="editor(this)">Edit</a>
           </div>
         </div>
-      </div>
-      <!-- messenger -->
-      <div class="info_block">
-        <div class="info_title">Messenger</div>
-        <div class="info_desc info_messenger" id="div_input_messenger">
-          https://www.messenger.com/
+        <!-- facebook popup -->
+        <div id="facebook_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Facebook Link</label>
+            <input type="tel" name="edittitle" id="input_facebook" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_facebook" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
+          </div>
         </div>
         <!-- messenger -->
-        <div class="info_edit">
-          <a class="messenger_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- messenger popup -->
-      <div id="messenger_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Messenger Link</label>
-          <input type="tel" name="edittitle" id="input_messenger" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_messenger" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <div class="info_block_social">
+          <div class="info_title">Messenger</div>
+          <div class="info_desc info_messenger" id="div_input_messenger">
+            https://www.messenger.com/
+          </div>
+          <!-- messenger -->
+          <div class="info_edit">
+            <a class="messenger_block" onclick="editor(this)">Edit</a>
           </div>
         </div>
-      </div>
-      <!-- instagram -->
-      <div class="info_block">
-        <div class="info_title">Instagram</div>
-        <div class="info_desc info_instagram" id="div_input_instagram">
-          https://www.instagram.com/
-        </div>
-        <div class="info_edit">
-          <a class="instagram_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- instagram popup -->
-      <div id="instagram_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Instagram Link</label>
-          <input type="tel" name="edittitle" id="input_instagram" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_instagram" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- messenger popup -->
+        <div id="messenger_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Messenger Link</label>
+            <input type="tel" name="edittitle" id="input_messenger" required />
+            <div class="editor_buttons">
+              <a
+                class="save_changes input_messenger"
+                onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- twitter -->
-      <div class="info_block">
-        <div class="info_title">Twitter</div>
-        <div class="info_desc info_twitter" id="div_input_twitter">
-          https://www.twitter.com/
-        </div>
-        <div class="info_edit">
-          <a class="twitter_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- twitter popup -->
-      <div id="twitter_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Twitter Link</label>
-          <input type="tel" name="edittitle" id="input_twitter" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_twitter" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- instagram -->
+        <div class="info_block_social">
+          <div class="info_title">Instagram</div>
+          <div class="info_desc info_instagram" id="div_input_instagram">
+            https://www.instagram.com/
+          </div>
+          <div class="info_edit">
+            <a class="instagram_block" onclick="editor(this)">Edit</a>
           </div>
         </div>
-      </div>
-      <!-- linkedin -->
-      <div class="info_block">
-        <div class="info_title">Linkedin</div>
-        <div class="info_desc info_linkedin" id="div_input_linkedin">
-          https://www.linkedin.com/
-        </div>
-        <div class="info_edit">
-          <a class="linkedin_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- linkedin popup -->
-      <div id="linkedin_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Linkedin Link</label>
-          <input type="tel" name="edittitle" id="input_linkedin" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_linkedin" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- instagram popup -->
+        <div id="instagram_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Instagram Link</label>
+            <input type="tel" name="edittitle" id="input_instagram" required />
+            <div class="editor_buttons">
+              <a
+                class="save_changes input_instagram"
+                onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- tiktok -->
-      <div class="info_block">
-        <div class="info_title">TikTok</div>
-        <div class="info_desc info_tiktok" id="div_input_tiktok">
-          https://www.tiktok.com/
-        </div>
-        <div class="info_edit">
-          <a class="tiktok_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- tiktok popup -->
-      <div id="tiktok_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">TikTok Link</label>
-          <input type="tel" name="edittitle" id="input_tiktok" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_tiktok" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- twitter -->
+        <div class="info_block_social">
+          <div class="info_title">Twitter</div>
+          <div class="info_desc info_twitter" id="div_input_twitter">
+            https://www.twitter.com/
+          </div>
+          <div class="info_edit">
+            <a class="twitter_block" onclick="editor(this)">Edit</a>
           </div>
         </div>
-      </div>
-      <!-- youtube -->
-      <div class="info_block">
-        <div class="info_title">YouTube</div>
-        <div class="info_desc info_youtube" id="div_input_youtube">
-          https://www.youtube.com/
-        </div>
-        <div class="info_edit">
-          <a class="youtube_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- youtube popup-->
-      <div id="youtube_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">YouTube Link</label>
-          <input type="tel" name="edittitle" id="input_youtube" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_youtube" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- twitter popup -->
+        <div id="twitter_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Twitter Link</label>
+            <input type="tel" name="edittitle" id="input_twitter" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_twitter" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- digital -->
-      <div class="info_block">
-        <div class="info_title">Digital</div>
-        <div class="info_desc info_digital" id="div_input_digital">
-          https://www.agentecard.com/design-2/
-        </div>
-        <div class="info_edit">
-          <a class="digital_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- digital popup -->
-      <div id="digital_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Digital Link</label>
-          <input type="tel" name="edittitle" id="input_digital" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_digital" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- linkedin -->
+        <div class="info_block_social">
+          <div class="info_title">Linkedin</div>
+          <div class="info_desc info_linkedin" id="div_input_linkedin">
+            https://www.linkedin.com/
+          </div>
+          <div class="info_edit">
+            <a class="linkedin_block" onclick="editor(this)">Edit</a>
           </div>
         </div>
-      </div>
-      <!-- website -->
-      <div class="info_block">
-        <div class="info_title">Website</div>
-        <div class="info_desc info_website" id="div_input_website">
-          https://demo127.tcy.nsq.mybluehost.me/
-        </div>
-        <div class="info_edit">
-          <a class="website_block" onclick="editor(this)">Edit</a>
-        </div>
-      </div>
-      <!-- website popup -->
-      <div id="website_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Website Link</label>
-          <input type="tel" name="edittitle" id="input_website" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_website" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- linkedin popup -->
+        <div id="linkedin_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Linkedin Link</label>
+            <input type="tel" name="edittitle" id="input_linkedin" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_linkedin" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- zillow -->
-      <div class="info_block">
-        <div class="info_title">Zillow</div>
-        <div class="info_desc info_zillow" id="div_input_zillow">
-          https://www.zillow.com/
+        <!-- tiktok -->
+        <div class="info_block_social">
+          <div class="info_title">TikTok</div>
+          <div class="info_desc info_tiktok" id="div_input_tiktok">
+            https://www.tiktok.com/
+          </div>
+          <div class="info_edit">
+            <a class="tiktok_block" onclick="editor(this)">Edit</a>
+          </div>
         </div>
-        <div class="info_edit">
-          <a class="zillow_block" onclick="editor(this)">Edit</a>
+        <!-- tiktok popup -->
+        <div id="tiktok_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">TikTok Link</label>
+            <input type="tel" name="edittitle" id="input_tiktok" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_tiktok" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- zillow popup -->
-      <div id="zillow_block" class="editor_block">
-        <div class="editor_block1">
-          <label for="edittitle">Zillow Link</label>
-          <input type="tel" name="edittitle" id="input_zillow" required />
-          <div class="editor_buttons">
-            <a class="save_changes input_zillow" onclick="savechanges(this)"
-              >Save Changes</a
-            >
-            <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        <!-- youtube -->
+        <div class="info_block_social">
+          <div class="info_title">YouTube</div>
+          <div class="info_desc info_youtube" id="div_input_youtube">
+            https://www.youtube.com/
+          </div>
+          <div class="info_edit">
+            <a class="youtube_block" onclick="editor(this)">Edit</a>
+          </div>
+        </div>
+        <!-- youtube popup-->
+        <div id="youtube_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">YouTube Link</label>
+            <input type="tel" name="edittitle" id="input_youtube" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_youtube" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
+          </div>
+        </div>
+        <!-- digital -->
+        <div class="info_block_social">
+          <div class="info_title">Digital</div>
+          <div class="info_desc info_digital" id="div_input_digital">
+            https://www.agentecard.com/design-2/
+          </div>
+          <div class="info_edit">
+            <a class="digital_block" onclick="editor(this)">Edit</a>
+          </div>
+        </div>
+        <!-- digital popup -->
+        <div id="digital_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Digital Link</label>
+            <input type="tel" name="edittitle" id="input_digital" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_digital" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
+          </div>
+        </div>
+        <!-- website -->
+        <div class="info_block_social">
+          <div class="info_title">Website</div>
+          <div class="info_desc info_website" id="div_input_website">
+            https://demo127.tcy.nsq.mybluehost.me/
+          </div>
+          <div class="info_edit">
+            <a class="website_block" onclick="editor(this)">Edit</a>
+          </div>
+        </div>
+        <!-- website popup -->
+        <div id="website_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Website Link</label>
+            <input type="tel" name="edittitle" id="input_website" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_website" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
+          </div>
+        </div>
+        <!-- zillow -->
+        <div class="info_block_social">
+          <div class="info_title">Zillow</div>
+          <div class="info_desc info_zillow" id="div_input_zillow">
+            https://www.zillow.com/
+          </div>
+          <div class="info_edit">
+            <a class="zillow_block" onclick="editor(this)">Edit</a>
+          </div>
+        </div>
+        <!-- zillow popup -->
+        <div id="zillow_block" class="editor_block">
+          <div class="editor_block1">
+            <label for="edittitle">Zillow Link</label>
+            <input type="tel" name="edittitle" id="input_zillow" required />
+            <div class="editor_buttons">
+              <a class="save_changes input_zillow" onclick="savechanges(this)"
+                >Save Changes</a
+              >
+              <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- password popup -->
+    <div id="password_block" class="editor_block">
+      <div class="editor_block1">
+        <label for="edittitle">Old Password:</label>
+        <div class="password_flex">
+          <input
+            type="password"
+            class="validate password"
+            name="edittitle"
+            id="input_password1"
+            value=""
+            onkeyup="nospaces(this)"
+            required
+          />
+          <span class="togglePassword">Show</span>
+        </div>
+        <label for="edittitle">Password:</label>
+        <div class="password_flex">
+          <input
+            type="password"
+            class="validate password"
+            name="edittitle"
+            id="input_password"
+            value=""
+            onkeyup="nospaces(this)"
+            required
+          />
+        </div>
+        <label>Confirm Password:</label>
+        <input
+          type="password"
+          id="conf"
+          class="validate passwordConfirm"
+          name="confirmPassword"
+          value=""
+        />
+        <div id="password_rules">
+          <h4>Passwords must meet these requirements:</h4>
+          <ul>
+            <li class="password_length">At least 8 characters</li>
+            <li class="password_uppercase">At least 1 uppercase letter</li>
+            <li class="password_number">At least one number</li>
+            <li class="password_match">Password and confirmation must match</li>
+          </ul>
+        </div>
+        <div class="editor_buttons">
+          <a class="save_changes input_password" onclick="savechanges(this)"
+            >Save Changes</a
+          >
+          <a class="cancel_changes" onclick="cancelsave(this)">Cancel</a>
+        </div>
+      </div>
+    </div>
     <!--popups -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

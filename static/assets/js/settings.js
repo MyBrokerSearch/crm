@@ -523,6 +523,17 @@ alphaOnlyInput.addEventListener("input", (e) => {
   alphaOnlyInput.value = previousValue;
 });
 // END
+
+//SOCIAL MEDIA DROPDOWN
+$(".social_media_drop").click(function () {
+  $(".info_block_social").stop().slideToggle();
+  $(".info_block_social").css({
+    display: "flex",
+  });
+  $(".social_block").toggleClass("social_block_active");
+});
+
+//END
 $(function () {
   $("#header").load("header.html");
 });
