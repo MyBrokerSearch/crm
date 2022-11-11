@@ -1,5 +1,6 @@
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("help_style").classList.remove("help_active");
 }
 function helpSupportBack() {
   if ($(".help_block").hasClass("help_active")) {

@@ -334,7 +334,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .checkbox_block .form_checkbox input:checked ~ .checkmark {
-  background-color: #4e4f4d;
+  background-color: #0b2556;
 }
 
 .checkbox_block .form_checkbox input:checked ~ .checkmark:after {
@@ -344,7 +344,7 @@ body::-webkit-scrollbar-thumb {
 .checkbox_block .form_checkbox .checkmark {
   position: absolute;
   top: -5px;
-  left: -28px;
+  left: -33px;
   height: 25px;
   width: 25px;
   border: 2px solid #4e4f4d;
@@ -356,8 +356,8 @@ body::-webkit-scrollbar-thumb {
   content: "";
   position: absolute;
   display: none;
-  left: 7px;
-  top: 2px;
+  left: 8px;
+  top: 4px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -367,7 +367,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .checkbox_block .form_checkbox:hover input ~ .checkmark {
-  background-color: #a2bc3a46;
+  background-color: #0b2556;
 }
 
 /* END */
@@ -407,7 +407,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: 1px 1px 1px 1px #858585;
           box-shadow: 1px 1px 1px 1px #858585;
   border-radius: 5px;
-  width: 25%;
+  width: 30%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -474,7 +474,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .home_block .home_top_blocks .mbs_advertising {
-  width: 50%;
+  width: 40%;
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: 1px 1px 1px 1px #858585;
@@ -523,7 +523,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .home_block .home_top_blocks .mbs_training {
-  width: 25%;
+  width: 30%;
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: 1px 1px 1px 1px #858585;
@@ -542,14 +542,29 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 20px;
-  margin: 0 20px;
+  padding: 10px;
 }
 
 .home_block .home_top_blocks .mbs_training .title_calls {
   font-size: 30px;
   font-family: auto;
   margin: 10px;
+}
+
+.home_block .home_top_blocks .mbs_training form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home_block .home_top_blocks .mbs_training form input {

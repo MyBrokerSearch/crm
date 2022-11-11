@@ -231,7 +231,7 @@ body {
             height: 0;
             width: 0;
             &:checked ~ .checkmark {
-                background-color: #4e4f4d;
+                background-color: #0b2556;
             }
             &:checked ~ .checkmark:after {
                 display: block;
@@ -240,7 +240,7 @@ body {
         .checkmark {
             position: absolute;
             top: -5px;
-            left: -28px;
+            left: -33px;
             height: 25px;
             width: 25px;
             border: 2px solid #4e4f4d;
@@ -250,8 +250,8 @@ body {
                 content: "";
                 position: absolute;
                 display: none;
-                left: 7px;
-                top: 2px;
+                left: 8px;
+                top: 4px;
                 width: 5px;
                 height: 10px;
                 border: solid white;
@@ -262,7 +262,7 @@ body {
             }
         }
         &:hover input ~ .checkmark {
-            background-color: #a2bc3a46;
+            background-color: #0b2556;
         }
     }
 }
@@ -293,7 +293,7 @@ body {
             flex-direction: column;
             box-shadow: 1px 1px 1px 1px #858585;
             border-radius: 5px;
-            width: 25%;
+            width: 30%;
             align-items: center;
             justify-content: center;
             padding: 10px 0;
@@ -340,7 +340,7 @@ body {
             }
         }
         .mbs_advertising {
-            width: 50%;
+            width: 40%;
             position: relative;
             overflow: hidden;
             box-shadow: 1px 1px 1px 1px #858585;
@@ -375,7 +375,7 @@ body {
             }
         }
         .mbs_training {
-            width: 25%;
+            width: 30%;
             position: relative;
             overflow: hidden;
             box-shadow: 1px 1px 1px 1px #858585;
@@ -384,14 +384,17 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 10px 20px;
-            margin: 0 20px;
+            padding: 10px;
             .title_calls {
                 font-size: 30px;
                 font-family: auto;
                 margin: 10px;
             }
             form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 input {
                     font-size: 18px;
                     font-weight: auto;

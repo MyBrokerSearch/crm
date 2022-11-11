@@ -5,6 +5,8 @@ function editor(element) {
     el.style.display = "none";
   }
   content.style.display = "flex";
+  $(".info_block_social").css("display", "none");
+  $(".social_block").removeClass("social_block_active");
 }
 
 function cancelsave(element) {
@@ -532,7 +534,6 @@ $(".social_media_drop").click(function () {
   });
   $(".social_block").toggleClass("social_block_active");
 });
-
 //END
 $(function () {
   $("#header").load("header.html");
