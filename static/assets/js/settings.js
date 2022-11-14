@@ -533,6 +533,10 @@ $(".social_media_drop").click(function () {
     display: "flex",
   });
   $(".social_block").toggleClass("social_block_active");
+  var hidden = document.getElementsByClassName("editor_block");
+  for (const el of hidden) {
+    el.style.display = "none";
+  }
 });
 //END
 $(function () {

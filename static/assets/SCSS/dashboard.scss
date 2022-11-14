@@ -46,7 +46,9 @@ body {
         flex-direction: column;
         padding-top: 20px;
         a {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-transform: uppercase;
             text-decoration: none;
             text-align: center;
@@ -79,9 +81,8 @@ body {
                 border-top: 10px solid transparent;
                 border-bottom: 10px solid transparent;
                 position: absolute;
-                left: -9px;
-                top: 15px;
-                border-left: 30px solid white;
+                left: -12px;
+                border-left: 25px solid white;
             }
         }
     }
