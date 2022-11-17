@@ -23,6 +23,7 @@ body {
     .main_services {
         width: 88%;
         overflow-y: auto;
+        position: relative;
         display: none;
         padding: 30px;
         background: white;
@@ -92,9 +93,9 @@ body {
 .info_task_block {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .info_task {
         display: flex;
-        width: 25%;
         flex-direction: column;
         padding: 10px;
         align-items: center;
@@ -527,103 +528,6 @@ body {
     }
 }
 
-// MOBILE MENU V
-.mobile_menu {
-    position: relative;
-    width: 0;
-    height: 400px;
-    display: none;
-    .service_list_mobile {
-        display: flex;
-        width: 200px;
-        position: absolute;
-        top: 14%;
-        left: -200px;
-        flex-direction: column;
-        overflow: hidden;
-        transition-duration: 1s;
-        padding: 10px;
-        background: #0b2556;
-        z-index: 999;
-        a {
-            color: white;
-            font-size: 17px;
-            font-family: auto;
-            margin: 3px 0;
-            cursor: pointer;
-            padding: 3px;
-            &:hover {
-                background: rgba(255, 255, 255, 0.253);
-            }
-        }
-        .active {
-            background: rgba(255, 255, 255, 0.253);
-            box-shadow: 1px 1px 1px 1px #00000045;
-        }
-    }
-    .check {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 3rem;
-        width: 3rem;
-        opacity: 0;
-        z-index: 3;
-        &:hover {
-            cursor: pointer;
-        }
-        &:checked ~ .service_list_mobile {
-            left: 10px;
-            transform: translateX(0%);
-            opacity: 1;
-            transition-duration: 1s;
-        }
-        &:checked ~ .ham-menu {
-            padding-left: 14px;
-            .line1 {
-                display: block;
-                transform: rotate(52deg);
-            }
-            .line2 {
-                opacity: 0;
-            }
-            .line3 {
-                display: block;
-                transform: rotate(-52deg);
-            }
-        }
-    }
-    .ham-menu {
-        height: 3rem;
-        width: 3rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 7px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: black;
-        .line {
-            background-color: white;
-            border-radius: 1em;
-            width: 30px;
-            height: 4px;
-        }
-        .line1 {
-            transform-origin: 0% 0%;
-            transition: transform 200ms ease-in-out;
-        }
-        .line3 {
-            transform-origin: 0% 100%;
-            transition: transform 200ms ease-in-out;
-        }
-    }
-}
-
-// END
-
 //home bottom block
 .gaanalytics_block {
     display: flex;
@@ -692,7 +596,7 @@ body {
     padding: 30px;
     box-shadow: 1px 1px 1px 1px #00000045;
     border-radius: 5px;
-    width: 100%;
+    width: 95%;
     margin-bottom: 30px;
     .info_idx {
         display: flex;
@@ -769,6 +673,67 @@ body {
             width: 80%;
         }
     }
+    .home_info_block {
+        flex-wrap: wrap;
+        .activity_task,
+        .text_task {
+            width: 25%;
+            .activity_top .activity_name_day .activity_name {
+                font-size: 20px;
+            }
+            .activity_middle,
+            .activity_top .activity_middle {
+                font-size: 16px;
+            }
+            .activity_button a {
+                font-size: 16px;
+            }
+        }
+    }
+    .home_block .home_top_blocks {
+        flex-wrap: wrap;
+
+        .home_call_tasks {
+            margin: 10px;
+            .one_block div {
+                .title_calls {
+                    font-size: 20px;
+                }
+                .current_calls {
+                    font-size: 27px;
+                }
+            }
+        }
+
+        .mbs_advertising {
+            margin: 10px;
+            .title_calls {
+                font-size: 22px;
+                font-family: auto;
+                margin: 10px;
+            }
+        }
+        .mbs_training {
+            margin: 10px;
+            label {
+                text-align: center;
+            }
+            form input {
+                font-size: 16px;
+            }
+            .title_calls {
+                font-size: 22px;
+            }
+        }
+    }
+    .ind_block,
+    .featured_listings {
+        padding: 0px;
+        flex-wrap: wrap;
+    }
+    .featured_block {
+        width: 25%;
+    }
 }
 @media (max-width: 1024px) {
     .container {
@@ -779,13 +744,107 @@ body {
             }
         }
     }
+    .service_title {
+        font-size: 29px;
+    }
+    .home_block .home_top_blocks .home_call_tasks {
+        width: 100%;
+    }
+    .home_block .home_top_blocks .mbs_advertising {
+        width: 100%;
+    }
+    .home_block .home_top_blocks .mbs_training {
+        width: 100%;
+    }
+    .home_info_block {
+        .activity_task,
+        .text_task {
+            width: 100%;
+        }
+    }
+    .ind_block .info_idx,
+    .featured_listings .info_idx {
+        width: 27%;
+        span {
+            font-size: 18px;
+        }
+    }
+    .featured_block .featured_top {
+        .featured_price {
+            font-size: 20px;
+        }
+        .featured_address,
+        .featured_info {
+            font-size: 17px;
+        }
+    }
+    .info_task_block {
+        flex-wrap: wrap;
+        .info_task {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
 }
 @media (max-width: 612px) {
     .container {
         .service_list {
             display: none;
         }
+        .main_services {
+            width: 100%;
+        }
+    }
+
+    .ind_block .info_idx,
+    .featured_listings .info_idx {
+        width: 42%;
+    }
+    .featured_block {
+        width: 46%;
     }
 }
 @media (max-width: 440px) {
+    .container {
+        .main_services {
+            padding: 0;
+        }
+    }
+    .home_block .home_top_blocks {
+        .home_call_tasks {
+            .one_block div {
+                .title_calls {
+                    font-size: 18px;
+                }
+                .current_calls {
+                    font-size: 23px;
+                }
+            }
+        }
+
+        .mbs_advertising {
+            .title_calls {
+                font-size: 18px;
+            }
+        }
+        .mbs_training {
+            .title_calls {
+                font-size: 18px;
+            }
+        }
+    }
+    .home_block .bottom_blocks_buttons a {
+        font-size: 22px;
+    }
+    .service_title {
+        padding: 10px;
+        font-size: 22px;
+    }
+    .ind_block .info_idx,
+    .featured_listings .info_idx {
+        width: 100%;
+    }
+    .featured_block {
+        width: 100%;
+    }
 }

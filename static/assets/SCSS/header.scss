@@ -531,6 +531,68 @@
     }
 }
 
+// MOBILE MENU V
+.mobile_menu {
+    position: relative;
+    width: 0;
+    display: none;
+    .service_list_mobile {
+        display: flex;
+        width: 200px;
+        position: absolute;
+        top: 45px;
+        left: -240px;
+        flex-direction: column;
+        overflow: hidden;
+        transition-duration: 1s;
+        padding: 10px;
+        background: #0b2556;
+        z-index: 999;
+        a {
+            color: white;
+            font-size: 17px;
+            font-family: auto;
+            margin: 3px 0;
+            cursor: pointer;
+            padding: 3px;
+            &:hover {
+                background: rgba(255, 255, 255, 0.253);
+            }
+        }
+        .active {
+            background: rgba(255, 255, 255, 0.253);
+            box-shadow: 1px 1px 1px 1px #00000045;
+        }
+    }
+    .hamburger {
+        position: relative;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+            border-radius: 5px;
+        }
+    }
+}
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+// END
+
 @media (max-width: 1400px) {
     .dropdown_profile_popup {
         width: 70%;
@@ -556,6 +618,10 @@
                 }
             }
         }
+    }
+    .dropdown_content,
+    .help_active {
+        top: 68px;
     }
 }
 @media (max-width: 1024px) {
@@ -593,8 +659,9 @@
         border-right: 8px solid transparent;
         border-top: 8px solid white;
     }
-    .dropdown_content {
-        top: 56px;
+    .dropdown_content,
+    .help_active {
+        top: 54px;
         right: 7px;
         width: 275px;
     }
@@ -627,9 +694,11 @@
             width: 40px;
         }
     }
-    .dropdown_content {
-        top: 48px;
-        width: 240px;
+    .dropdown_content,
+    .help_active {
+        top: 47px;
+        width: 250px;
+        right: 0;
     }
     .call_request_popup,
     .report_problem_popup {
@@ -652,21 +721,14 @@
 }
 @media (max-width: 612px) {
     #header1 {
-        padding: 5px 20px;
+        padding: 5px 0;
     }
     .header_logo {
         width: 15%;
         margin: 0 5px;
     }
     .header_search {
-        width: 45%;
-        margin: 0 5px;
-        div {
-            width: 100%;
-            input {
-                width: 100%;
-            }
-        }
+        display: none;
     }
     .header_info {
         width: 60%;
@@ -684,7 +746,7 @@
         }
     }
     .dropdown_menu {
-        width: 30%;
+        width: 22%;
         img {
             width: 40px;
         }
@@ -697,15 +759,39 @@
     .dropdown_content {
         top: 48px;
     }
+    .mobile_menu {
+        width: 40px;
+        height: 40px;
+        display: block;
+        .service_list_mobile {
+            .header_search {
+                display: block;
+                margin: 5px 0;
+                width: 100%;
+                border-radius: 5px;
+                div {
+                    input {
+                        border-radius: 5px;
+                    }
+                    button {
+                        top: 3px;
+                    }
+                }
+            }
+            a {
+                font-size: 17px;
+            }
+        }
+        .hamburger {
+            div {
+                margin: 3px 0;
+            }
+        }
+    }
 }
 @media (max-width: 520px) {
     #header1 {
         padding: 5px;
-    }
-    .header_search {
-        div {
-            width: 90%;
-        }
     }
     .header_info {
         width: 60%;
@@ -727,7 +813,11 @@
         border-top: 6px solid white;
     }
     .dropdown_content {
-        top: 46px;
+        top: 49px;
+    }
+    .help_active {
+        top: 49px;
+        width: 260px;
     }
     .dropdown_profile_popup .profile_block .profile_info .info_social a {
         margin: 2px;
@@ -746,13 +836,7 @@
     #header1 {
         padding: 5px;
     }
-    .header_search {
-        width: 35%;
-        div button {
-            top: 4px;
-            left: 3px;
-        }
-    }
+
     .header_info {
         width: 60%;
         margin: 0 5px;
@@ -766,8 +850,10 @@
             width: 30px;
         }
     }
-    .dropdown_content {
-        top: 42px;
+    .dropdown_content,
+    .help_active {
+        top: 50px;
+        right: 0;
     }
     .dropdown_profile_popup {
         padding: 5px;
@@ -776,9 +862,6 @@
 @media (max-width: 360px) {
     .header_logo {
         width: 20%;
-    }
-    .header_search {
-        display: none;
     }
     .header_info {
         width: 80%;

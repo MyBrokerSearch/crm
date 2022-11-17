@@ -27,7 +27,15 @@ function closePopup(element) {
     el.style.display = "none";
   }
 }
-
+function myFunction1() {
+  if ($(".hamburger").hasClass("change")) {
+    $(".hamburger").removeClass("change");
+    $(".service_list_mobile").css("left", "-240px");
+  } else {
+    $(".hamburger").addClass("change");
+    $(".service_list_mobile").css("left", "-5px");
+  }
+}
 window.onclick = function (event) {
   var input = document.getElementById("subject_email");
   var textarea = document.getElementById("textarea");

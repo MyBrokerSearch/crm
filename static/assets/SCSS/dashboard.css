@@ -33,6 +33,7 @@ body::-webkit-scrollbar-thumb {
 .container .main_services {
   width: 88%;
   overflow-y: auto;
+  position: relative;
   display: none;
   padding: 30px;
   background: white;
@@ -128,13 +129,14 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .info_task_block .info_task {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -752,140 +754,6 @@ body::-webkit-scrollbar-thumb {
   border-top: 2px red solid;
 }
 
-.mobile_menu {
-  position: relative;
-  width: 0;
-  height: 400px;
-  display: none;
-}
-
-.mobile_menu .service_list_mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 200px;
-  position: absolute;
-  top: 14%;
-  left: -200px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  padding: 10px;
-  background: #0b2556;
-  z-index: 999;
-}
-
-.mobile_menu .service_list_mobile a {
-  color: white;
-  font-size: 17px;
-  font-family: auto;
-  margin: 3px 0;
-  cursor: pointer;
-  padding: 3px;
-}
-
-.mobile_menu .service_list_mobile a:hover {
-  background: rgba(255, 255, 255, 0.253);
-}
-
-.mobile_menu .service_list_mobile .active {
-  background: rgba(255, 255, 255, 0.253);
-  -webkit-box-shadow: 1px 1px 1px 1px #00000045;
-          box-shadow: 1px 1px 1px 1px #00000045;
-}
-
-.mobile_menu .check {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 3rem;
-  width: 3rem;
-  opacity: 0;
-  z-index: 3;
-}
-
-.mobile_menu .check:hover {
-  cursor: pointer;
-}
-
-.mobile_menu .check:checked ~ .service_list_mobile {
-  left: 10px;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  opacity: 1;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-.mobile_menu .check:checked ~ .ham-menu {
-  padding-left: 14px;
-}
-
-.mobile_menu .check:checked ~ .ham-menu .line1 {
-  display: block;
-  -webkit-transform: rotate(52deg);
-          transform: rotate(52deg);
-}
-
-.mobile_menu .check:checked ~ .ham-menu .line2 {
-  opacity: 0;
-}
-
-.mobile_menu .check:checked ~ .ham-menu .line3 {
-  display: block;
-  -webkit-transform: rotate(-52deg);
-          transform: rotate(-52deg);
-}
-
-.mobile_menu .ham-menu {
-  height: 3rem;
-  width: 3rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 7px;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: black;
-}
-
-.mobile_menu .ham-menu .line {
-  background-color: white;
-  border-radius: 1em;
-  width: 30px;
-  height: 4px;
-}
-
-.mobile_menu .ham-menu .line1 {
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-}
-
-.mobile_menu .ham-menu .line3 {
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-}
-
 .gaanalytics_block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -949,7 +817,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: 1px 1px 1px 1px #00000045;
           box-shadow: 1px 1px 1px 1px #00000045;
   border-radius: 5px;
-  width: 100%;
+  width: 95%;
   margin-bottom: 30px;
 }
 
@@ -1053,6 +921,70 @@ body::-webkit-scrollbar-thumb {
   .container .main_services {
     width: 80%;
   }
+  .home_info_block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .home_info_block .activity_task,
+  .home_info_block .text_task {
+    width: 25%;
+  }
+  .home_info_block .activity_task .activity_top .activity_name_day .activity_name,
+  .home_info_block .text_task .activity_top .activity_name_day .activity_name {
+    font-size: 20px;
+  }
+  .home_info_block .activity_task .activity_middle,
+  .home_info_block .activity_task .activity_top .activity_middle,
+  .home_info_block .text_task .activity_middle,
+  .home_info_block .text_task .activity_top .activity_middle {
+    font-size: 16px;
+  }
+  .home_info_block .activity_task .activity_button a,
+  .home_info_block .text_task .activity_button a {
+    font-size: 16px;
+  }
+  .home_block .home_top_blocks {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .home_block .home_top_blocks .home_call_tasks {
+    margin: 10px;
+  }
+  .home_block .home_top_blocks .home_call_tasks .one_block div .title_calls {
+    font-size: 20px;
+  }
+  .home_block .home_top_blocks .home_call_tasks .one_block div .current_calls {
+    font-size: 27px;
+  }
+  .home_block .home_top_blocks .mbs_advertising {
+    margin: 10px;
+  }
+  .home_block .home_top_blocks .mbs_advertising .title_calls {
+    font-size: 22px;
+    font-family: auto;
+    margin: 10px;
+  }
+  .home_block .home_top_blocks .mbs_training {
+    margin: 10px;
+  }
+  .home_block .home_top_blocks .mbs_training label {
+    text-align: center;
+  }
+  .home_block .home_top_blocks .mbs_training form input {
+    font-size: 16px;
+  }
+  .home_block .home_top_blocks .mbs_training .title_calls {
+    font-size: 22px;
+  }
+  .ind_block,
+  .featured_listings {
+    padding: 0px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .featured_block {
+    width: 25%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1062,11 +994,93 @@ body::-webkit-scrollbar-thumb {
   .container .service_list a {
     font-size: 14px;
   }
+  .service_title {
+    font-size: 29px;
+  }
+  .home_block .home_top_blocks .home_call_tasks {
+    width: 100%;
+  }
+  .home_block .home_top_blocks .mbs_advertising {
+    width: 100%;
+  }
+  .home_block .home_top_blocks .mbs_training {
+    width: 100%;
+  }
+  .home_info_block .activity_task,
+  .home_info_block .text_task {
+    width: 100%;
+  }
+  .ind_block .info_idx,
+  .featured_listings .info_idx {
+    width: 27%;
+  }
+  .ind_block .info_idx span,
+  .featured_listings .info_idx span {
+    font-size: 18px;
+  }
+  .featured_block .featured_top .featured_price {
+    font-size: 20px;
+  }
+  .featured_block .featured_top .featured_address,
+  .featured_block .featured_top .featured_info {
+    font-size: 17px;
+  }
+  .info_task_block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .info_task_block .info_task {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 612px) {
   .container .service_list {
     display: none;
+  }
+  .container .main_services {
+    width: 100%;
+  }
+  .ind_block .info_idx,
+  .featured_listings .info_idx {
+    width: 42%;
+  }
+  .featured_block {
+    width: 46%;
+  }
+}
+
+@media (max-width: 440px) {
+  .container .main_services {
+    padding: 0;
+  }
+  .home_block .home_top_blocks .home_call_tasks .one_block div .title_calls {
+    font-size: 18px;
+  }
+  .home_block .home_top_blocks .home_call_tasks .one_block div .current_calls {
+    font-size: 23px;
+  }
+  .home_block .home_top_blocks .mbs_advertising .title_calls {
+    font-size: 18px;
+  }
+  .home_block .home_top_blocks .mbs_training .title_calls {
+    font-size: 18px;
+  }
+  .home_block .bottom_blocks_buttons a {
+    font-size: 22px;
+  }
+  .service_title {
+    padding: 10px;
+    font-size: 22px;
+  }
+  .ind_block .info_idx,
+  .featured_listings .info_idx {
+    width: 100%;
+  }
+  .featured_block {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=dashboard.css.map */
